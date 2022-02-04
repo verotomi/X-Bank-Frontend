@@ -1,0 +1,34 @@
++ list-group-item classnál leszedni a bordert
+- táblázatokat formázni
+-- nagy részét balra, kis részét jobbra
+-- színek, kiemelések
+-- oszlopok igazítása
+- token:
+-- lejárati idejét beállítani
+-- ha kilépünk, törölni a tokent az adatbázisban!? 
++ új user esetén a passwordot titkosítani és elmenteni. Thunder Client -> Collections -> Xbank request -> Change password
+- éles adatbázis nem működik
+- Login:
+-- ha a mobilbank azonosítóban szöveg van: üres képernyő + undefined token 
+-- ha a mobilnank azonosító nem létezik az users táblában: üres képernyő + undefined token
+-- akkor is be lehet lépni, ha a mobilbank azonosító mögé szöveget írok be
+-- ha a jelszó hibás, "lefagy" a program 
+- useUserdata-ból kiszedni, ami nem kell.
+- logo-n a click-et átrakni a-href-ről NavLink-re
+- sidebar-on ne csak a szöveg, hanem az egész gomb legyen clikckelhető
+- netbank oldalon a logo-ra kattintva a href helyett navlink: netbank
+- utolső bejelentkezés adatait + egy user ikont a header-be kirakni / átrakni
+- mobilbank oldalon belinkelni a letöltési oldalt
+- emlékezzen rám gombot lekezelni vagy kiszedni
+- routing hiba: ha egy Sidebar linkre kattintok és utána lépek be, az URL-ben olyan cím marad, ami nem létezik. Ez visszafelé is igaz, kilépés során
+- ikonokat igazítani a sidebar-ban (ri ikonok kicsit feljebb vannak)
+- megbízásokhoz 'feltörés' gomb
+- kedvezményezettekhez 'módosítás/törlés' gomb
+- állandó megbízásokhoz 'módosítás/törlés' gomb
+- táblázatok fejlécét lekerekíteni
+- jelenleg a Netbank -> Áttekintés is lekéri az adatokat, és az Egyenleglekérdezés, és a Megtakarítások is.
+!! - ezt jó lenne kiszervezni külön függvénybe
+!! - jelenleg csak az Áttekintés menti el a Store-ba, a többi nem. Ez a bejelentkezéskor mág jó, de a számlaműveleteknél már nem! 
+-  Card.Title-ket kiszedni, vagy egységesíteni
+- beraktam a store-ba a savings-et, de nem tudom, volt-e értelme?
+- kedvezményezetteknél: csak az aktivakat adja vissza az API. Egyáltalán van kezelve az inaktív állapot?

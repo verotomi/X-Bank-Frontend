@@ -1,0 +1,27 @@
+
+X-Bank:
+- npx create-react-app xbank helyett: npx create-react-app@5.0.0 xbank
+- xbank mappa megnyitása VSCode-ban
+- npm i --save sass
+- npm install react-bootstrap bootstrap@5.1.3
+- css fájlok átnevezése scss-re (hivatkozásokat is át kell írni)
+-- html, js, css, scss módosítások egyből megjelennek
+- npm run start 
+-- böngészőben: localhost:3000
+- import 'bootstrap/dist/css/bootstrap.min.css';
+- egy-egy elem importálása pl.:
+-- vagy: import Button from 'react-bootstrap/Button';
+-- vagy:import {Button} from 'react-bootstrap';
+- több elem importálása:
+-- import {Button, Alarm} from 'react-bootstrap/Button';
+
+- _variables.scss létrehozása
+- _fonts.scss létrehozása
+
+Egy új lekérdezés + táblázat létrehizásának a lépései:
+- Backenden a route létrehozása 
+
+Érdekes megoldások, utána nézni és összeírni egy fájlba, ahonnan később fel tudom eleveníteni
+- gombnyomásra történő átirányítás:
+-- gomb helyett Link-et használni:
+-- <Link to="/valahova" className="btn btn-primary">Sign up</Link>

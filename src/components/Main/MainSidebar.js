@@ -1,36 +1,36 @@
 import React, { Fragment } from "react";
-import SidebarItem from '../Shared/SidebarItem';
+import SidebarItem from "../Shared/SidebarItem";
 
 export default class MainSidebar extends React.Component {
-  render(){  
+  render() {
     return (
       <Fragment>
         <aside id="sidebar" className="sidebar">
           <ul className="sidebar-nav" id="sidebar-nav">
             <li className="nav-item">
-              <SidebarItem name="Főoldal" icon="ri ri-home-2-line" link=""/>
+              <SidebarItem status="active" name="Főoldal" icon="bi bi-house" link="" />
             </li>
             <li className="nav-item">
-              <SidebarItem name="Bankfiókok" icon="bi bi-bank2" link="bankfiokok"/>
-            </li>
-            <li  className="nav-item">
-              <SidebarItem name="Bankautomaták" icon="bi bi-cash-stack" link="bankautomatak"/>
+              <SidebarItem status="active" name="Bankfiókok" icon="bi bi-bank2" link="bankfiokok" />
             </li>
             <li className="nav-item">
-              <SidebarItem name="Valuta árfolyamok" icon="bi bi-currency-euro" link="valuta"/>
+              <SidebarItem status="active" name="Bankautomaták" icon="bi bi-cash-stack" link="bankautomatak" />
             </li>
-            <li  className="nav-item">
-              <SidebarItem name="Deviza árfolyamok" icon="bi bi-currency-exchange" link="deviza"/>
-            </li> 
-            <li  className="nav-item">
-              <SidebarItem name="Kapcsolat" icon="ri-contacts-line" link="kapcsolat"/>
-            </li> 
-            <li  className="nav-item">
-              <SidebarItem name="Információk" icon="bi bi-info-square" link="informacio"/>
-            </li> 
-            <li  className="nav-item">
-              <SidebarItem name="Mobilbank" icon="bx bx-mobile-alt" link="mobilbank"/>
-            </li> 
+            <li className="nav-item">
+              <SidebarItem status="active" name="Valuta árfolyamok" icon="bi bi-currency-euro" link="valuta" />
+            </li>
+            <li className="nav-item">
+              <SidebarItem status="active" name="Deviza árfolyamok" icon="bi bi-currency-dollar" link="deviza" />
+            </li>
+            <li className="nav-item">
+              <SidebarItem status="active" name="Kapcsolat" icon="bi bi-envelope" link="kapcsolat" />
+            </li>
+            <li className="nav-item">
+              <SidebarItem status="active" name="Információk" icon="bi bi-info-square" link="informacio" />
+            </li>
+            <li className="nav-item">
+              <SidebarItem status="active" name="Mobilbank" icon="bi bi-phone" link="mobilbank" />
+            </li>
           </ul>
         </aside>
       </Fragment>

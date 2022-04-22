@@ -1,21 +1,17 @@
+import LoginButton from "./LoginButton/LoginButton";
+import HeaderNav from "../Shared/HeaderNav";
 import React, { Fragment } from "react";
-import Logo from '../Shared/Logo';
-import LoginButton from './LoginButton';
-import useUserData from '../Shared/useUserData';
-
+import useUserData from "../../assets/script/scripts";
 
 export default function MainHeader() {
-  
-  const { userData, setUserData } = useUserData();
-  
-  return <>
+  const { setUserData } = useUserData();
+
+  return (
+    <Fragment>
       <header id="header" className="header fixed-top d-flex align-items-center">
-        <Logo/>
+        <HeaderNav />
         <LoginButton setUserData={setUserData} />
-
       </header>
-    </>;
-
+    </Fragment>
+  );
 }
-
-

@@ -1,5 +1,0 @@
-- állandó megbízások tábla:
--- a type értéke magyaru van, nem angolul
--- a type felesleges
--- a direction felesleges
--- lehet hogy a reference_number is felesleges? (át kéne gondolni)

@@ -10,6 +10,9 @@ import React, { Fragment } from "react";
 import TableHeadHistory from "./TableHeadHistory";
 import TableRowHistory from "./TableRowHistory";
 
+/**
+ * Megjeleníti a számlatörténetet
+ */
 class History extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

@@ -41,7 +41,6 @@ export default class Footer extends React.Component {
             <strong>
               <span>Verovszki Tamás</span>
             </strong>
-            . Minden jog fenntartva!
           </div>
         </footer>
         <button

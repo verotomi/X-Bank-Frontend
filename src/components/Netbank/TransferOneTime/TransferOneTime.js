@@ -178,7 +178,7 @@ class TransferOneTime extends React.Component {
     if (fetchedData["error"] === "Lejárt token!") {
       sessionExpired(this.props);
     } else if (!fetchedData["error"]) {
-      this.setState({ validationResponse: "Sikeres rögzítés" });
+      this.setState({ validationResponse: "Az átutalás sikeresen megtörtént!" });
       this.setState({ alert4Color: "success" });
       this.setState({ showAlert4: true });
       this.setState({ isError: false });

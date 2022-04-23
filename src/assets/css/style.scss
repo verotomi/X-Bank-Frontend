@@ -13,6 +13,11 @@
 }
 html {
   scroll-behavior: smooth;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
 }
 body {
   background: v.$main-background-color !important;
@@ -23,6 +28,48 @@ a {
     text-decoration: none;
   }
 }
+@media (max-width: 599px) {
+  p, a, table, label, .footer {
+    font-size: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  h4, .go-back-to-top i {
+      font-size: 16px !important;
+  }
+  .card-icon > .bi:first-child {
+    font-size: 20px !important;
+}
+  h5, .breadcrumb, .breadcrumb-item a, #login-button {
+    font-size: 14px !important;
+    span {
+      font-size: 12px !important;
+    }
+  }
+  .dropdown-header{
+    font-size: 12px !important;
+    font-size: 12px !important;
+  }
+  .dropdown-menu {
+    width: fit-content !important;
+}
+  .card-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  #dropdown-basic, .bi-three-dots {
+    font-size: 10px !important;
+  }
+  .toggle-sidebar-btn{
+    margin-left: 10px !important;
+  }
+  th, tr {
+    @media (max-width: 599px) {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+}
 
 // ------------------------------------------------------------------------------------------------
 // -------- Bootstrap styling overrides ----------------------------------------------------------
@@ -30,6 +77,7 @@ a {
 $success: v.$netbank-green-color;
 $danger: v.$netbank-red-color;
 $link-decoration: none;
+$dropdown-min-width: 90px;
 @import "bootstrap";
 .table {
   --bs-table-hover-bg: #f7760012;
@@ -58,6 +106,9 @@ $link-decoration: none;
   .active {
     font-weight: 600;
     color: v.$middle-blue-color;
+    @media (max-width: 599px) {
+      padding-left: 10px;
+    }
   }
 }
 .breadcrumb-item a{
@@ -78,6 +129,9 @@ $link-decoration: none;
   background-color: v.$dark-blue-color;
   padding: 12px 16px 12px 16px;
   text-align: center;
+  @media (max-width: 599px) {
+    font-size: 12px;
+  }
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -88,9 +142,9 @@ $link-decoration: none;
   padding: 20px 30px;
   transition: all 0.3s;
 }
-@media (max-width: 1199px) {
+@media (max-width: 599px) {
   #main {
-    padding: 20px;
+    padding: 20px 5px 5px 10px;
   }
 }
 
@@ -125,7 +179,7 @@ $link-decoration: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
-    text-align: left;
+    text-align: center;
     background-color: v.$dark-blue-color;
     color: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -139,6 +193,7 @@ $link-decoration: none;
   .dropdown-item {
     font-size: 15px;
     padding: 10px 15px;
+    text-align: center;
     transition: all 0.3s;
     &:hover {
       background-color: v.$table-hover-color;
@@ -148,11 +203,6 @@ $link-decoration: none;
       font-size: 18px;
       line-height: 0;
     }
-  }
-}
-@media (max-width: 480px) {
-  .dropdown-menu {
-    width: 100vw !important;
   }
 }
 @media (min-width: 768px) {
@@ -221,7 +271,7 @@ $link-decoration: none;
   padding-left: 20px;
   .toggle-sidebar-btn {
     font-size: 32px;
-    margin-left: 80px;
+    margin-left: 50px;
     cursor: pointer;
     color: v.$middle-blue-color;
   }
@@ -298,9 +348,9 @@ $link-decoration: none;
 .sidebar::-webkit-scrollbar-thumb {
   background-color: white;
 }
-
 .sidebar {
   position: fixed;
+  height: fit-content;
   top: 60px;
   left: 0;
   bottom: 0;
@@ -311,6 +361,11 @@ $link-decoration: none;
   overflow-y: auto;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: white;
+  border-radius: 0px 0px 5px 0px ;
+  @media (max-width: 599px) {
+    width: v.$sidebar-width-low-res;
+    padding: 5px 5px 5px 10px;
+  }
 }
 .sidebar-nav {
   padding: 0;
@@ -339,6 +394,9 @@ $link-decoration: none;
     border-radius: 4px;
     i {
       font-size: 18px;
+      @media (max-width: 599px) {
+        font-size: 10px;
+      }
       margin-right: 10px;
       color: v.$sidebar-item-color;
     }
@@ -355,6 +413,9 @@ $link-decoration: none;
     .bi-caret-down {
       margin-right: 0;
       font-size: 15px;
+      @media (max-width: 599px) {
+        font-size: 10px;
+      }
     }
   }
   .nav-link:not(.collapsed) .bi-caret-down {
@@ -385,6 +446,9 @@ $link-decoration: none;
       color: v.$sidebar-item-color;
       background-color: v.$sidebar-nav-background-color;
       padding: 10px 15px 10px 25px;
+      @media (max-width: 599px) {
+        padding: 10px 15px 10px 15px!important;
+      }
       margin: 0px 0px 5px 0px;
       border-radius: 4px;
       i {
@@ -401,6 +465,11 @@ $link-decoration: none;
     }
     li {
       transition: all 0.3s;
+    }
+    .bi-circle{
+      @media (max-width: 599px) {
+      font-size: 4px;
+      }
     }
   }
 }
@@ -438,7 +507,6 @@ $link-decoration: none;
     right: 0px;
     top: 15px;
     .icon {
-      padding-right: 20px;
       padding-bottom: 5px;
       transition: all 0.5s;
       font-size: 16px;
@@ -501,6 +569,10 @@ $link-decoration: none;
     border-radius: 14%;
     color: v.$sidebar-item-color;
     background: v.$sidebar-nav-background-color;
+    @media (max-width: 599px) {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
   }
   .mobilebank-ad {
     img {
@@ -552,6 +624,9 @@ $link-decoration: none;
   font-weight: 700;
   margin: 10px;
   padding: 20px 0 15px 0;
+  @media (max-width: 599px) {
+    padding: 15px 0 15px 0;
+  }
   span {
     color: v.$card-title-span-color;
     font-size: 14px;
@@ -561,6 +636,12 @@ $link-decoration: none;
 h5.card-title {
   padding-left: 20px;
   border-radius: 5px;
+  @media (max-width: 599px) {
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 // ------------------------------------------------------------------------
@@ -830,6 +911,9 @@ h5 i {
   position: fixed;
   bottom: 0;
   width: 100%;
+  @media (max-width: 599px) {
+    visibility: hidden;
+  }
 }
 
 // ------------------------------------------------------------------------
@@ -865,5 +949,17 @@ h5 i {
         color: black;
       }
     }
+  }
+}
+.table>:not(caption)>*>td {
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem!important;
+  @media (max-width: 599px) {
+    padding: 0.3rem 0.1rem 0.3rem 0.1rem!important;
+  }
+}
+.table>:not(caption)>*>th {
+  padding: 0.6rem 0.3rem 0.6rem 0.3rem !important; 
+  @media (max-width: 599px) {
+    padding: 0.6rem 0.1rem 0.6rem 0.1rem !important; 
   }
 }

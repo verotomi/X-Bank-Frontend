@@ -348,7 +348,7 @@ function EditRecurringTransfer(props) {
     if (fetchedData["error"] === "Lejárt token!") {
       sessionExpired(props);
     } else if (!fetchedData["error"]) {
-      setValidationResponse("Sikeres rögzítés");
+      setValidationResponse("A módosítás sikeresen megtörtént!");
       setAlert5Color("success");
       setShowAlert5(true);
       setButton1IsDisabled(true);

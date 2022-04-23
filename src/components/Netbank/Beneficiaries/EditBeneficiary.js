@@ -119,7 +119,7 @@ function EditBeneficiary(props) {
     if (fetchedData["error"] === "Lejárt token!") {
       sessionExpired(props);
     } else if (!fetchedData["error"]) {
-      setValidationResponse("Sikeres rögzítés");
+      setValidationResponse("Sikeres rögzítés!");
       setAlert4Color("success");
       setShowAlert4(true);
       setIsError(false);

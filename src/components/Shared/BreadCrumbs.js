@@ -5,7 +5,6 @@ import React, { Fragment } from "react";
 function BreadCrumbs(props) {
   return (
     <Fragment>
-      <div className="pagestitle">
         <nav>
           <Breadcrumb>
             {props.data.map((a) =>
@@ -19,7 +18,6 @@ function BreadCrumbs(props) {
             )}
           </Breadcrumb>
         </nav>
-      </div>
     </Fragment>
   );
 }

@@ -273,7 +273,7 @@ class NewRecurringTransfer extends React.Component {
     if (fetchedData["error"] === "Lejárt token!") {
       sessionExpired(this.props);
     } else if (!fetchedData["error"]) {
-      this.setState({ validationResponse: "Sikeres rögzítés" });
+      this.setState({ validationResponse: "Sikeres rögzítés!" });
       this.setState({ alert5Color: "success" });
       this.setState({ showAlert5: true });
       this.setState({ isError: false });

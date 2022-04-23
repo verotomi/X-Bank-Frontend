@@ -157,7 +157,7 @@ class StatementsBody extends React.Component {
     const { filteredStatements } = this.state;
     const szurok = [];
     const ertek = [];
-    this.props.accounts.map((a) => szurok.push(a.number + " - " + translate(a.type)));
+    this.props.accounts.map((a) => szurok.push(translate(a.type)));
     this.props.accounts.map((a) => ertek.push(a.id));
     return (
       <Fragment>

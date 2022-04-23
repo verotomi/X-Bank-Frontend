@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+/**
+ * Lejárt token esetén tájékoztatja a felhasználót, törli a böngészőben tárolt adatokat (köztük a tokent is), valamint kilépteti a felhasználót.
+ * @param {*} props 
+ */
 export function sessionExpired(props) {
   props.showLoggedOutModal("A munkamenet lejárt! Kérem jelentkezzen be újra!");
   sessionStorage.clear();

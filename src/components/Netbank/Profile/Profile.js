@@ -6,6 +6,11 @@ import { tryToLogout } from "../../../actions/actions";
 import React, { Fragment, useContext, useState } from "react";
 import { LogoutModal } from "../../../modals/LogoutModal";
 
+/**
+ * 
+ * @param {*} props 
+ * @returns 
+ */
 function Profile(props) {
   const [alert4Color, setAlert4Color] = useState("danger");
   const [buttonsAreDisabled, setButtonsAreDisabled] = useState(false);

@@ -120,7 +120,7 @@ class NewSaving extends React.Component {
     this.setState({ buttonsAreDisabled: true });
     const fetchedData = await this.context.createNewSaving(data, this.props.token).then();
     if (!fetchedData["error"]) {
-      this.setState({ validationResponse: "Sikeres rögzítés" });
+      this.setState({ validationResponse: "Sikeres rögzítés!" });
       this.setState({ alert2Color: "success" });
       this.setState({ showAlert2: true });
       this.setState({ isError: false });

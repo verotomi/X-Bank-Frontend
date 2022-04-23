@@ -8,6 +8,10 @@ import Main from "./components/Main/Main";
 import Netbank from "./components/Netbank/Netbank";
 import React from "react";
 
+/**
+ * A bejelentkezett állapotot kezeli, annak függvényében adja vissza a megfelelő komponenst. 
+ * @param {*} props 
+ */
 function App(props) {
   const userData = JSON.parse(sessionStorage.getItem("userData"));
   if (userData != null) {

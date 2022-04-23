@@ -326,7 +326,7 @@ class History extends React.Component {
     this.setState({ loadingText: constantsClass.TEXT_LOADING });
     this.setState({ loadingTextClass: "loading" });
     this.setState({ accountNumberId: this.props.accounts[e.currentTarget.selectedIndex].id });
-    this.setState({ currency: this.props.accounts[e.currentTarget.selectedIndex].currency }); // -1 azért, mert az első elem az a "válasszon számlát" szöveg
+    this.setState({ currency: this.props.accounts[e.currentTarget.selectedIndex].currency });
     const data = {
       id_bank_account_number: this.props.accounts[e.currentTarget.selectedIndex].id,
       id_user: this.props.id,

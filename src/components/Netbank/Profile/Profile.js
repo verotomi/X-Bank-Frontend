@@ -197,8 +197,8 @@ function Profile(props) {
         </Modal.Header>
         <Modal.Body>
           <Card.Body className="pb-0">
-            <form onSubmit={handleSubmitChangePassword} className="row g-3 needs-validation" noValidate>
-              <div className="col-12">
+            <form onSubmit={handleSubmitChangePassword} className="row g-3" noValidate>
+              <div className="col-12 login-form">
                 <label htmlFor="yourPassword" className="form-label">
                   Jelenlegi jelszó:
                 </label>
@@ -217,7 +217,7 @@ function Profile(props) {
                 />
                 <div className="invalid-feedback">Kérem adja meg jelszavát!</div>
               </div>
-              <div className="col-12">
+              <div className="col-12 login-form">
                 <label htmlFor="yourPassword" className="form-label">
                   Új jelszó:
                 </label>
@@ -236,7 +236,7 @@ function Profile(props) {
                 />
                 <div className="invalid-feedback">Kérem adja meg jelszavát!</div>
               </div>
-              <div className="col-12">
+              <div className="col-12 login-form">
                 <label htmlFor="yourPassword" className="form-label">
                   Új jelszó mégegyszer:
                 </label>

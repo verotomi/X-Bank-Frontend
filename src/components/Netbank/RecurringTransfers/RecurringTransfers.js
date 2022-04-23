@@ -428,7 +428,7 @@ class RecurringTransfers extends React.Component {
                         col8={
                           <h5>
                             <Link className="btn badge bg-success" to="/allandomegbizasmodositas" state={a}>
-                              <i className="bi bi-pencil"></i> &nbsp;Módosítás
+                              <i className="bi bi-pencil"></i> {window.innerWidth > 599 && " Módosítás"}
                             </Link>
                           </h5>
                         }
@@ -440,7 +440,7 @@ class RecurringTransfers extends React.Component {
                               onClick={this.handleDeleteRecurringTransfer}
                               className="btn badge bg-danger"
                             >
-                              <i className="bi bi-x-square"></i> &nbsp;Törlés
+                              <i className="bi bi-x-square"></i>{window.innerWidth > 599 && " Törlés"}
                             </Badge>
                           </h5>
                         }
@@ -466,7 +466,7 @@ class RecurringTransfers extends React.Component {
                   {this.state.validationResponse}
                 </Alert>
                 <Card.Body className="pb-0">
-                  <form onSubmit={this.handleSubmit} className="row g-3 needs-validation" noValidate>
+                  <form onSubmit={this.handleSubmit} className="row g-3" noValidate>
                     <Button disabled={this.state.buttonsAreDisabled} className="btn btn-success w-100" type="submit">
                       Igen
                     </Button>

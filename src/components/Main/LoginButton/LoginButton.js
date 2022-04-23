@@ -106,8 +106,8 @@ function LoginButton(props) {
         </Modal.Header>
         <Modal.Body>
           <Card.Body className="pb-0">
-            <form onSubmit={handleSubmit} className="row g-3 needs-validation" noValidate>
-              <div className="col-12">
+            <form onSubmit={handleSubmit} className="row g-3" noValidate>
+              <div className="col-12 login-form">
                 <label htmlFor="yourUsername" className="form-label">
                   Netbank azonosító:
                 </label>
@@ -132,7 +132,7 @@ function LoginButton(props) {
                 />
                 <div className="invalid-feedback">Kérem adja meg a netbank azonosítóját!</div>
               </div>
-              <div className="col-12">
+              <div className="col-12 login-form">
                 <label htmlFor="yourPassword" className="form-label">
                   Jelszó:
                 </label>

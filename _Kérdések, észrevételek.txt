@@ -1,0 +1,2 @@
++ ha a Fragment-be rakok be className hivatkozásokat, akkor nem lesz hatásuk. // a Fragment erre nem alkalmas
++ képeket nem tudok importálni, csak a public mappából // importálni kell változóba és változóként használni

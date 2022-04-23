@@ -14,13 +14,13 @@ function HeaderNav(props) {
   return (
     <Fragment>
       <Col className="d-flex align-items-center justify-content-start">
+        <button className="hamburger-button toggle-sidebar-btn" onClick={handleOnclick}>
+          <i className="bi bi-list"></i>
+        </button>
         <NavLink to="/" className="logo d-flex align-items-center">
           <Image src={favicon} alt="" />
           <span className="d-none d-lg-block">X Bank</span>
         </NavLink>
-        <button className="hamburger-button toggle-sidebar-btn" onClick={handleOnclick}>
-          <i className="bi bi-list"></i>
-        </button>
       </Col>
     </Fragment>
   );

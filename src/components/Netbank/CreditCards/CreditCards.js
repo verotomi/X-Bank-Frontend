@@ -114,7 +114,7 @@ class CreditCardsBody extends React.Component {
                           ) : (
                             <h5>
                               <Badge onClick={(e) => this.handleCreditCardEdit(e, a)} className="btn badge bg-success">
-                                <i className="bi bi-wrench"></i> &nbsp;Kártya kezelése
+                                <i className="bi bi-gear"></i>{window.innerWidth > 599 && " Kártya kezelése"}
                               </Badge>
                             </h5>
                           )

@@ -1,0 +1,10 @@
+- listák:
+-- csoportos kijelölés (pl. egyszerre több elem törlése)
+++ hover-re további infó (pl fiókok nyitvatartása, tranzakció részletei, megtakarítás részletei, stb)
+-- kereső mező
+++ rendezés különböző feltételek szerint
+- számlatörténet: szűrés összeg szerint
++ bankkártya hozzá leygen kapcsolható másik számlaszámhoz - kész van, de a form-on az aktuális számlaszám default kiválasztása hibás
+- jelszó emlékeztető
+- backend validáció (idő hiányában kimaradt, a működést nagyrészt nem befolyásolja, csak a biztonságot)
++ bankfiókok teljes nyitvatartása nincs megjelenítve sehol (pl. egér-hover)

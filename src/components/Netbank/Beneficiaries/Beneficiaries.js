@@ -252,7 +252,7 @@ class BeneficiariesList extends Component {
                   {this.state.validationResponse}
                 </Alert>
                 <Card.Body className="pb-0">
-                  <form onSubmit={this.handleSubmit} className="row g-3 needs-validation" noValidate>
+                  <form onSubmit={this.handleSubmit} className="row g-3" noValidate>
                     <Button disabled={this.state.buttonsAreDisabled} className="btn btn-success w-100" type="submit">
                       Igen
                     </Button>

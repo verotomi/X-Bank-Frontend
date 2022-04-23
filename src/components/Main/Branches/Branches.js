@@ -250,7 +250,7 @@ export default class Branches extends React.Component {
             if (a.openingtimetoday === b.openingtimetoday) {
               return a.zip > b.zip ? -1 : 1;
             }
-            return a.openingtimetoday > b.openingtimetoday ? 1 : -1; // ez így jó !!
+            return a.openingtimetoday > b.openingtimetoday ? 1 : -1;
           });
         }
         this.setState({ sortIconTableHead1: "bi bi-chevron-expand" });

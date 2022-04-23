@@ -1,9 +1,9 @@
 @use "_variables" as v;
 @use "_fonts";
 
-// ------------------------------------------------------------------------------------------------
-// -------- General -------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** General *******************************************************************************
+// ************************************************************************************************
 *{
   --bs-body-font-family: "Roboto";
   font-family: var(--bs-body-font-family);
@@ -29,25 +29,50 @@ a {
   }
 }
 @media (max-width: 599px) {
-  p, a, table, label, .footer {
+  p, label, .footer {
     font-size: 10px !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
   }
-  h4, .go-back-to-top i {
-      font-size: 16px !important;
+  .alert{
+    font-size: 14px;
+  }
+  .card-body p {
+    margin-bottom: 0;
+  }
+  table, input {
+    font-size: 10px !important;
+  }
+  input, select {
+    font-size: 10px !important;
+    padding: 6px !important;
+  }
+  .form-item span {
+    font-size: 10px !important;
+  }
+  h4{
+      font-size: 12px !important;
+  }
+  .go-back-to-top i {
+    font-size: 20px !important;
   }
   .card-icon > .bi:first-child {
     font-size: 20px !important;
 }
-  h5, .breadcrumb, .breadcrumb-item a, #login-button {
+  h5, .breadcrumb, .breadcrumb-item a, #login-button, #profile-button {
     font-size: 14px !important;
     span {
       font-size: 12px !important;
     }
+    h5 .badge {
+      font-size: 10px !important;
+      margin-left: 5px;
+    }
   }
-  .dropdown-header{
-    font-size: 12px !important;
+  .dropdown-header p{
+    font-size: 14px !important;
+  }
+  .dropdown-item p{
     font-size: 12px !important;
   }
   .dropdown-menu {
@@ -57,11 +82,14 @@ a {
     width: 48px !important;
     height: 48px !important;
   }
-  #dropdown-basic, .bi-three-dots {
+  #dropdown-basic, .bi-three-dots, .bi-x-square {
     font-size: 10px !important;
   }
-  .toggle-sidebar-btn{
-    margin-left: 10px !important;
+  .bi-pencil {
+    font-size: 13px !important;
+  }
+  .badge{
+    padding: 4px 12px !important;
   }
   th, tr {
     @media (max-width: 599px) {
@@ -71,13 +99,13 @@ a {
   }
 }
 
-// ------------------------------------------------------------------------------------------------
-// -------- Bootstrap styling overrides ----------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** Bootstrap styling overrides ***********************************************************
+// ************************************************************************************************
 $success: v.$netbank-green-color;
 $danger: v.$netbank-red-color;
 $link-decoration: none;
-$dropdown-min-width: 90px;
+$dropdown-min-width: 120px;
 @import "bootstrap";
 .table {
   --bs-table-hover-bg: #f7760012;
@@ -90,9 +118,25 @@ $dropdown-min-width: 90px;
   background-color: darken($success, 11%);
   color: white;
 }
-// ------------------------------------------------------------------------
-// -------- Breadcrumbs ---------------------------------------------------
-// ------------------------------------------------------------------------
+.d-lg-block, .d-none {
+  display: block !important;
+}
+.pe-3 {
+  padding-right: 0 !important;
+}
+.pb-0 {
+  padding-bottom: 15px !important;
+
+}
+.card-body {
+  @media (max-width: 599px) {
+    padding: 0.4rem 0.4rem 0 0.4rem;
+  }
+}
+// ************************************************************************
+// ******** Breadcrumbs ***************************************************
+// ************************************************************************
+
 .breadcrumb {
   font-size: 20px;
   color: v.$middle-blue-color;
@@ -116,9 +160,10 @@ $dropdown-min-width: 90px;
   color: gray;
 }
 
-// ------------------------------------------------------------------------
-// -------- Popover -------------------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Popover *******************************************************
+// ************************************************************************
+
 .popover {
   max-width: 100%;
   border-radius: 5px;
@@ -130,13 +175,18 @@ $dropdown-min-width: 90px;
   padding: 12px 16px 12px 16px;
   text-align: center;
   @media (max-width: 599px) {
-    font-size: 12px;
+    font-size: 14px;
+  }
+}
+.popover-body td{
+  @media (max-width: 599px) {
+    font-size: 11px;
   }
 }
 
-// ------------------------------------------------------------------------------------------------
-// -------- Main ----------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** Main **********************************************************************************
+// ************************************************************************************************
 #main {
   margin-top: 60px;
   padding: 20px 30px;
@@ -148,14 +198,20 @@ $dropdown-min-width: 90px;
   }
 }
 
-// ------------------------------------------------------------------------
-// -------- Dropdown ------------------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Dropdown ******************************************************
+// ************************************************************************
+
 #dropdown-header-profile {
   background-color: v.$light-background-color;
   color: v.$dark-blue-color;
   &:focus {
     box-shadow: none;
+  }
+  .dropdown-header ,.dropdown-item {
+    @media (max-width: 599px) {
+      font-size: 14px;
+    }
   }
 }
 #dropdown-divider {
@@ -180,6 +236,10 @@ $dropdown-min-width: 90px;
     border-top-right-radius: 5px;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
     text-align: center;
+    @media (max-width: 599px) {
+      text-align: left;
+      font-size: 14px;
+    }
     background-color: v.$dark-blue-color;
     color: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -194,6 +254,10 @@ $dropdown-min-width: 90px;
     font-size: 15px;
     padding: 10px 15px;
     text-align: center;
+    @media (max-width: 599px) {
+      text-align: left;
+      font-size: 14px;
+    }
     transition: all 0.3s;
     &:hover {
       background-color: v.$table-hover-color;
@@ -242,9 +306,9 @@ $dropdown-min-width: 90px;
   }
 }
 
-// ------------------------------------------------------------------------------------------------
-// -------- Header --------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** Header ********************************************************************************
+// ************************************************************************************************
 .logo {
   line-height: 1;
   img {
@@ -253,6 +317,9 @@ $dropdown-min-width: 90px;
   }
   span {
     font-size: 26px;
+    @media (max-width: 599px) {
+      font-size: 18px;
+    }
     font-weight: 700;
     color: v.$middle-blue-color;
   }
@@ -269,9 +336,13 @@ $dropdown-min-width: 90px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
   background-color: white;
   padding-left: 20px;
+  @media (max-width: 599px) {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  padding-right: 20px;
   .toggle-sidebar-btn {
     font-size: 32px;
-    margin-left: 50px;
     cursor: pointer;
     color: v.$middle-blue-color;
   }
@@ -287,7 +358,10 @@ $dropdown-min-width: 90px;
   background: none;
   color: inherit;
   border: none;
-  padding: 0;
+  margin: 0 20px 0 0;
+  @media (max-width: 599px) {
+    margin: 0 5px 0 0;
+  }
   transition: all 0.3s;
   font: inherit;
   cursor: pointer;
@@ -297,7 +371,10 @@ $dropdown-min-width: 90px;
     border-radius: 5px;
     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 50%);
     color: inherit;
-    padding: 0;
+    margin: 0 20px 0 0;
+    @media (max-width: 599px) {
+      margin: 0 5px 0 0;
+    }
     transition: all 0.3s;
     cursor: pointer;
   }
@@ -336,9 +413,9 @@ $dropdown-min-width: 90px;
   }
 }
 
-// ------------------------------------------------------------------------------------------------
-// -------- Sidebar -------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** Sidebar *******************************************************************************
+// ************************************************************************************************
 
 .sidebar::-webkit-scrollbar {
   width: 5px;
@@ -363,6 +440,7 @@ $dropdown-min-width: 90px;
   background-color: white;
   border-radius: 0px 0px 5px 0px ;
   @media (max-width: 599px) {
+    transition: all 0.6s;
     width: v.$sidebar-width-low-res;
     padding: 5px 5px 5px 10px;
   }
@@ -395,7 +473,7 @@ $dropdown-min-width: 90px;
     i {
       font-size: 18px;
       @media (max-width: 599px) {
-        font-size: 10px;
+        font-size: 14px;
       }
       margin-right: 10px;
       color: v.$sidebar-item-color;
@@ -466,9 +544,12 @@ $dropdown-min-width: 90px;
     li {
       transition: all 0.3s;
     }
-    .bi-circle{
+    .bi-circle, .bi-circle-fill{
+      vertical-align: 0.3em;
       @media (max-width: 599px) {
       font-size: 4px;
+      vertical-align: 0.15em;
+
       }
     }
   }
@@ -498,9 +579,9 @@ $dropdown-min-width: 90px;
     left: -#{v.$sidebar-width};
   }
 }
-// ------------------------------------------------------------------------------------------------
-// -------- Dashboard -----------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** Dashboard *****************************************************************************
+// ************************************************************************************************
 .dashboard {
   .filter {
     position: absolute;
@@ -565,14 +646,10 @@ $dropdown-min-width: 90px;
     height: 64px;
     flex-shrink: 0;
     flex-grow: 0;
-    margin: 10px;
+    margin: 10px 10px 0 10px;
     border-radius: 14%;
     color: v.$sidebar-item-color;
     background: v.$sidebar-nav-background-color;
-    @media (max-width: 599px) {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
   }
   .mobilebank-ad {
     img {
@@ -600,21 +677,25 @@ $dropdown-min-width: 90px;
   }
 }
 
-// ------------------------------------------------------------------------
-// -------- Card ----------------------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Card **********************************************************
+// ************************************************************************
+
 .card {
   border-radius: 5px;
   border: none;
   box-shadow: 0px 0px 30px rgba(1, 41, 112, 0.1);
   margin-bottom: 30px;
+  @media (max-width: 599px) {
+    margin-bottom: 15px;
+  }
   overflow: hidden;
 }
 .card-body {
   p {
-    padding-left: 30px;
+    padding-left: 1em;
     padding-top: 10px;
-    padding-right: 20px;
+    padding-right: 1em;
     text-align: justify;
   }
 }
@@ -625,7 +706,7 @@ $dropdown-min-width: 90px;
   margin: 10px;
   padding: 20px 0 15px 0;
   @media (max-width: 599px) {
-    padding: 15px 0 15px 0;
+    padding: 15px 0 15px 15px;
   }
   span {
     color: v.$card-title-span-color;
@@ -634,19 +715,17 @@ $dropdown-min-width: 90px;
   }
 }
 h5.card-title {
-  padding-left: 20px;
   border-radius: 5px;
   @media (max-width: 599px) {
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 10px 10px 0 0;
+    padding: 15px 0 0 0;
   }
 }
 
-// ------------------------------------------------------------------------
-// -------- Form ----------------------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Form **********************************************************
+// ************************************************************************
+
 #grid-check-history-1,
 #grid-check-history-2 {
   margin-left: 1em;
@@ -656,6 +735,9 @@ h5.card-title {
 }
 .form-item {
   margin-bottom: 20px;
+  @media (max-width: 599px) {
+    margin-bottom: 8px;
+  }
 }
 .form-check-input {
   &:checked {
@@ -674,6 +756,10 @@ h5.card-title {
 .form-label {
   margin-bottom: 0.3em;
 }
+.login-form{
+  padding: 0px 0px 10px 0px;
+  margin-top: 5px;
+}
 .netbank-form {
   label {
     background: v.$table-head-background-color;
@@ -686,6 +772,9 @@ h5.card-title {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 15px;
+    @media (max-width: 599px) {
+      padding-left: 5px;
+    }
     padding-right: 15px;
     border-radius: 5px;
   }
@@ -797,12 +886,16 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-// ------------------------------------------------------------------------
-// -------- Table ---------------------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Table *********************************************************
+// ************************************************************************
+
 table {
   h5 {
     margin-bottom: 0px;
+    @media (max-width: 599px) {
+      padding-left: 8px;
+    }
   }
   .badge {
     font-weight: 500;
@@ -873,9 +966,10 @@ tr:nth-child(1) td {
   border-collapse: collapse;
 }
 
-// ------------------------------------------------------------------------
-// -------- Rest ----------------------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Rest **********************************************************
+// ************************************************************************
+
 #credit-card-details {
   font-weight: 500;
   text-decoration: none;
@@ -891,15 +985,18 @@ h5 i {
 .modal-header {
   background-color: v.$sidebar-nav-background-color;
 }
+.modal-body label {
+  font-size: 15px !important;
+}
 .first-label {
   margin-top: 1em;
 }
 .bi-filter{
   vertical-align: 0em;  
 }
-// ------------------------------------------------------------------------------------------------
-// -------- Footer --------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
+// ************************************************************************************************
+// ******** Footer ********************************************************************************
+// ************************************************************************************************
 .footer {
   padding: 20px 0;
   color:v.$dark-blue-color;
@@ -916,9 +1013,10 @@ h5 i {
   }
 }
 
-// ------------------------------------------------------------------------
-// -------- Back to top button --------------------------------------------
-// ------------------------------------------------------------------------
+// ************************************************************************
+// ******** Back to top button ********************************************
+// ************************************************************************
+
 .go-back-to-top {
   background: v.$middle-blue-color;
   border-radius: 6px;
@@ -952,14 +1050,33 @@ h5 i {
   }
 }
 .table>:not(caption)>*>td {
-  padding: 0.3rem 0.3rem 0.3rem 0.3rem!important;
   @media (max-width: 599px) {
-    padding: 0.3rem 0.1rem 0.3rem 0.1rem!important;
+    padding: 0.3rem 0 0.3rem 0 !important; 
   }
 }
 .table>:not(caption)>*>th {
-  padding: 0.6rem 0.3rem 0.6rem 0.3rem !important; 
   @media (max-width: 599px) {
-    padding: 0.6rem 0.1rem 0.6rem 0.1rem !important; 
+    padding: 0.5rem 0.1rem 0.5rem 0 !important; 
   }
 }
+.table>:not(caption)>*>td:first-child {
+  @media (max-width: 599px) {
+    padding-left: 0.3rem !important; 
+  }
+}
+.table>:not(caption)>*>th:first-child {
+  @media (max-width: 599px) {
+    padding-left: 0.3rem !important; 
+  }
+}
+.table>:not(caption)>*>td:last-child {
+  @media (max-width: 599px) {
+    padding-right: 0.3rem !important; 
+  }
+}
+.table>:not(caption)>*>th:last-child {
+  @media (max-width: 599px) {
+    padding-right: 0.3rem !important; 
+  }
+}
+

@@ -397,7 +397,7 @@ class NewRecurringTransfer extends React.Component {
                         <input
                           className="form-check-input"
                           onClick={this.handleClickCheckBox}
-                          onChange={(e) => {}} // enélkül Warning van a console-on
+                          onChange={(e) => {}}
                           checked={this.state.isChecked}
                           disabled={this.state.isDisabled}
                           type="checkbox"

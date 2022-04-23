@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { toggleSidebarItem, toggleSidebarItem2, toggleSidebarItem3 } from "../../actions/actions";
+import { toggleSidebarItem, toggleSidebarItem2, toggleSidebarItem3, toggleSidebar } from "../../actions/actions";
 import React, { Fragment, useEffect, useState } from "react";
 import SidebarItem from "../Shared/SidebarItem";
 
@@ -26,7 +26,7 @@ function NetbankSidebar(props) {
     e.preventDefault();
     props.toggleSidebarItem();
   }
-
+  
   function handleOnclick2(e) {
     e.preventDefault();
     props.toggleSidebarItem2();
@@ -36,8 +36,9 @@ function NetbankSidebar(props) {
     e.preventDefault();
     props.toggleSidebarItem3();
   }
-
+  
   function handleClickA() {
+    (window.innerWidth < 600) && props.toggleSidebar();      
     setNavlinkAClassname("bi bi-circle-fill");
     setNavlinkBClassname("bi bi-circle");
     setNavlinkCClassname("bi bi-circle");
@@ -47,6 +48,7 @@ function NetbankSidebar(props) {
   }
 
   function handleClickB() {
+    (window.innerWidth < 600) && props.toggleSidebar();      
     setNavlinkAClassname("bi bi-circle");
     setNavlinkBClassname("bi bi-circle-fill");
     setNavlinkCClassname("bi bi-circle");
@@ -56,6 +58,7 @@ function NetbankSidebar(props) {
   }
 
   function handleClickC() {
+    (window.innerWidth < 600) && props.toggleSidebar();
     setNavlinkAClassname("bi bi-circle");
     setNavlinkBClassname("bi bi-circle");
     setNavlinkCClassname("bi bi-circle-fill");
@@ -65,6 +68,7 @@ function NetbankSidebar(props) {
   }
 
   function handleClickD() {
+    (window.innerWidth < 600) && props.toggleSidebar();
     setNavlinkAClassname("bi bi-circle");
     setNavlinkBClassname("bi bi-circle");
     setNavlinkCClassname("bi bi-circle");
@@ -74,6 +78,7 @@ function NetbankSidebar(props) {
   }
 
   function handleClickE() {
+    (window.innerWidth < 600) && props.toggleSidebar();
     setNavlinkAClassname("bi bi-circle");
     setNavlinkBClassname("bi bi-circle");
     setNavlinkCClassname("bi bi-circle");
@@ -83,6 +88,7 @@ function NetbankSidebar(props) {
   }
 
   function handleClickF() {
+    (window.innerWidth < 600) && props.toggleSidebar();
     setNavlinkAClassname("bi bi-circle");
     setNavlinkBClassname("bi bi-circle");
     setNavlinkCClassname("bi bi-circle");
@@ -370,6 +376,7 @@ const mapDispatchToProps = {
   toggleSidebarItem,
   toggleSidebarItem2,
   toggleSidebarItem3,
+  toggleSidebar,
 };
 
 function mapStateToProps(state) {

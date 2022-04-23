@@ -1,0 +1,281 @@
+2022-04-23
+- Modal title kicsit lejjeb van, mint kéne
+- handlebutton1..2..3-féléketz átnevezni
+- mobil nézetre xbank szöveget kirakni?
+- pixelt és em-et vw-re
+- Ismert hiba: áll megb mód kedvezm nem menthető
+- statistics - azonosito helyett #
+- utolsó oszlopok elé kicsi padding
+áll megb mod kis gomb nem töröl
+
+FELHASZNÁLÓK:
+- 1 Verovszki Tamás 
+      netbank id: verotomi123
+      jelszó: 8p56bZrK
+      mobilbank id: 11111111
+      pin: 658427
+      3db számla, 2db kártya
+- 2 Balassy Melinda
+      netbank id: balimeli20
+      jelszó: Ks52Eg80
+      mobilbank id: 222222222
+      pin: 548732
+      3 számla, 2 kártya
+- 3 Hubai Réka
+      netbank id: hreka1972
+      jelszó: xxxxxxxx
+      mobilbank id: 33333333
+      pin: 691470
+      2 számla, 1 kártya
+- 4 Fenyvesi Erika
+      netbank id: ferika40
+      jelszó: xxxxxxxx
+      mobilbank id: 44444444
+      pin: 552468
+      1 számla, xxx kártya
+- 5 Kiss Tibor
+      netbank id: quimby2000
+      jelszó: Wh49AP13
+      mobilbank id: 55555555
+      pin: 601944
+      0 számla, 0 kártya
+- 6 Admin
+      netbank id: admin001
+      jelszó: xxxxxxxx
+      mobilbank id: -
+      pin: -
+      0db számla, 0db kártya
+- 7 Baky Dániel
+      netbank id: bakydani123
+      jelszó: Td72LA20
+      mobilbank id: 77777777
+      pin: 711642
+      3db számla, 2db kártya
+- 8 Csóti Zoltán
+      netbank id: csotizoli123
+      mobilbank id: 88888888
+      pin: 872950
+      jelszó: eT59Hs20
+      3db számla, 2db kártya
+- 9 Losonczi Gyula
+      netbank id: gyuszmorgo
+      jelszó: gS58Hk11
+      mobilbank id: 99999999
+      pin: 912875
+      2db számla, 2db kártya
+- 10 Susányi Ákos
+      netbank id: sakos123
+      jelszó: bs28KT51
+      mobilbank id: 10101010
+      pin: 102917
+      3db számla, 2db kártya
+- 11 Halász Gábor
+      netbank id: haligabi11
+      jelszó: Px58HS13
+      mobilbank id: 11935470
+      pin: 742885
+      3db számla, 2db kártya
+- 12 Máté Adrián
+      netbank id: madrian12
+      jelszó: Ep56FS42
+      mobilbank id: 21485094
+      pin: 341950
+      3db számla, 2db kártya
+- 13 Balog Kadosa
+      netbank id: bkada1234
+      jelszó: B2A47skt
+      mobilbank id: 54718991
+      pin: 317540
+      3db számla, 2db kártya
+
+GÁBOR:
++ interserveren F5 hiba:
+++ be kellett rakni egy .htaccess fájlt a public_html/xbank mappába az alábbi tartalommal:
+  RewriteEngine On
+  #RewriteBase /xbank Ez a sor ki van kommentelve!!!
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [QSA,L]
+++ a package.json-ban módosítani kellett:
++++ ezt: "homepage": "https://verovszki.eu/xbank",
++++ erre: "homepage": "https://xbank.verovszki.eu",
++ bankkártya módosítás nyitva hiba:
+++ be kellett rakni egy feltételt az EditCreditCard komponens render függvényébe a megjelenítéséhez:
++++ {this.props.creditCard && ...
+
+FORMÁZÁSOK
+- Alt Shift F
+- ctrl shift p - sort
+- == -> ===
+- keys hibákat rendberakni
+- componentDidmount-okat előre + kiszedni a bind-ből
+- importokat abc-rendbe rakni
+- függvényeket abc-be
+- Public/index.html: beállítani a html fájlban:
+-  meta tag-ek
+- szerző
+- content stb
++ kiszedni: vero, rere, stb változókat, prop-okat
+- let var megkeresni, nem-e jó const helyette
+- modal-okat kiszervezni
+- form input id-ket átnézni
+- változó-nevek, css osztály nevek egységesítése  
++ vendor mappát szelektálni
+- scss sass használata
+- css rendezni tematika szerint
+- id-ket, ostályneveket átnevezni pl
+- validate - van ahol nem a scriptből hívódik meg
+- konstans - kibővíteni
+F5 hiba:
+
+React:
+- <BrowserRouter basename={'/xbank'}>
+- <Routes basename={'/xbank'}>
+- localhost: 
+-- nem működik
+- interserver: 
+-- működik, a címsor jól van kezelve
+-- F5-re: Error 404
+-- ha a címsort kézzel írom be vagy kimásolom: Error 404
+
+React:
+- <BrowserRouter>
+- <Routes basename={'/xbank'}>
+- localhost: 
+-- működik (címsorban nincs /xbank)
+- interserver: 
+-- működik, a címsorból hiányzik a /xbank
+-- F5-re: Error 404
+-- ha a címsort kézzel írom be vagy kimásolom: Error 404
+
+React:
+- <BrowserRouter>
+- <Routes>
+- localhost: 
+-- működik (címsorban nincs /xbank)
+- interserver: 
+-- működik, a címsorból hiányzik a /xbank
+-- F5-re: Error 404
+-- ha a címsort kézzel írom be vagy kimásolom: Error 404
+
+HIBÁK:
+- F5-re lefagy (csak az Interseveren)
+- hitelkártya módosítás nyitva -> áttekintés - lefagy
++ bankkártya módosítás után az alert bezárása után a gombok aktívak, de módosítani nem lehet semmit,
+   kivéve az aktív állapotot, de azt is csak az Aktív-Inaktív szövegre kattintás után
+- popover ablak legfelső divider fölösleges
++ mobil nézeten a Sidebar nem tűnik el: A @media-kat lejjebb kellett rakni a css-ben
+- éjfél után 51 perccel nem vált át a záródátum a mai napra és kézzel sem lehet váltani
++ Bankfiókok rendezés nem működik
++ Kivonatok nem jönnek be
++ interserver 2 óra eltolódás: árfolyamok, tranzakciók időbélyege, ...?
++ pénz lekötése nem csökkenti az egyenleget
+
+JAVÍTANDÓK:
++ formok elküldésekor a gombok a küldés pillanatában legyenek inaktívak, ne pedig a válasz megérkezése után
++ KÖVETKEZŐ VERZIÓ Random Generated partnernév nincs lefordítva
+
+MÓDOSÍTÁSOK:
++ pénzösszegeknél egységesen 2 tizedes megjelenítése, 3 számjegyenként vesszős tagolás
+- formoknál szétbontani a gombok disabled kezelésést, és:
+-- hiba esetén csak a mégsem legyen aktív
+-- sikeres művelet esetén: mindkettő
+
+
+- Main:
+++ szűrők fejléce nem egységes
+++ kapcsolat: linkek új tab-on nyíljanak meg
+// információk: verziót beállítani
+++ bankautomaták - szűrő nem működik
+
+- Netbank:
++ a számlaadatok betöltéséig a menük legyenek inaktívak
+++ állandó megbízások módosítása:
++++ a heti ismétlődésű a megbízásoknál a nap nem választódik ki  
++++ állandó megbízások módosításánál valahogy néha bekerül egy NULL a days mezőbe
+++++ akkor került be, ha napi rendszeresség volt kiválasztva és a days mező értéke üres volt. Ez akkor fordulhatott elő, ha mobinetről lett rögzíte az áll megb.
+      az ugyanis ""-t írt be a mezőbe "-" helyett. Módosítottam a mobinet apit is! 
++ bankszámlaszámok bevitelénél a kötőjel kezelés hibás
++ számlatörténet popup nem jelzi a partner nevét
+- pénz beviteli mező ezres tagolása (+ jobbra igazítása  ? Í)
++ megtakarítás feltörése után a lista visszaáll alapállapot szerinti rendezésre
++ uj megtak: a selectorok nem tüntetik el az alertet
++ a store-t csak a netbankoverview frissíti jelenleg !?
++ store-ba kell a savings??? NEM!
++ bankkártyáknál ha kapcsolódó számlaszámot váltok, minden esetben nullázódnak a limitek (nem csak eur <-> ft váltásnál)
++ bankkártyáknál a hozzá kapcsolt számla néha hibásan jelenik meg módosításnál. Lehet hogy a store-ból rosszul jon at valami?
++ bankkártyék: ha kilépés előtt nyitva maradta bankkártya módosítás komponens, akkor újra belépésnél a hitelkártya komponens hibával leállt
+    elvileg ez le van kezelve a compponentWillAnmount-ban, gyakorlatilag nem (vagy nem jól) működik. Megoldás:
+    a NetbankOverview Component DidMount-ban törlöm a megfelelő változót, ha "nyitva maradt" a bankkártyamódosítás komponens
++ eygszeri utalás -> utalás elküldése után, lekötés -> lekötés rögzítése után, bankkártyák kezelése -> kártya kezelése: nem frissül a selectorban az egyenleg
+- kedvezményezettek törlésénél valami el van csúszva
++ useUserdata-ból kiszedni, ami nem kell. Ami benne van az maradhat
+
+Fetch-eket kiszervezni külön fájlba, try-catch-be rakni, és ott le lehet kezelni a network errort is és a lejárt tokent is
+
+- Backend
+-- cron jobs - bankkivonat ne minden hó 31-én legyen, hanem minden nap fusson és nézz emeg, hogy hó vége van-e
+-- adatbázisból a szemetet kiszedni
+- bankszámlaegyenlegek 3 helyen vannak tárolva és eltérnek egymástól
++ backend: a createNewIncomingTransaction nem ellenőrzi, hog yvan-e megfelelő számlaszám. HA nincs, hibával leáll
++ betét feltörésnél a dátum / idő el van csúszva 5 órával? - triggerből kiszedni a +5 órát!
+- tokennél nincs ellenőrizve hogy az adott userhez tartozik-e?
+- hibaüzeneteket átnézni
+-- visszaküldött status kódokat rendberakni.Vigyázat: a statuskód befolyásolja a visszaküldött response felépítését!
+- areTheseParametersAvailable-t átrakni osztályba
+
+-
+- backend validáció (továbbfejlesztés)
+
+- Rendberakás:
+- console hibaüzeteteket ánézni, kezelni pl keys
+- kiszervezni amit lehet (pl Modal-ok)
+- input id-ket átnézni, mindegyikből csak egy legyen
+- redux store
+- redux actions
+- redux frissítése (mikor, mi frissítse és hogyan)
+- css
+-- változók használata
+-- sass használata (pl egymásba ágyazás, darken)
+- környezti változók FE BE is
+- amit lehet, átrakni html-ből React-Bootstrap-re
+-- pl ROW COL
+- Fölösleges a-href #-eket kiszedni (figyelni , hogy a menü kinézete ne változzon meg az 'a href' kiszedése miatt)
+
+Online verziónál az F5 máshova visz, 
+Dokumentációba:
+- lodash
+- react-bootstrap
+
+Nincs lekezelve a lejárt token:
+- editrecurring 
+-- useeffect -getbeneficiaries
+-- startquery - createbeneficiary
+
+- A Controllers mappából kiszedni a fájlokat
+-- csak tesztjelleggel vannak ott
+-- miattuk kell a Model-ekben mindent fillable-re jelölni
+-- ha kész van, akkor a Model-ekben csak az legyen fillable, ami muszáj
+
++ Régi APIt visszarakni hogy a Mobil app működjön
+
++ Állandó megbízásnál: nincs kezelve átutalási díj (vagy fejlesztés, vagy "INGYENES") -> DE IGEN? KEZELVE VAN!
+
+Továbbfejlesztés:
+- admin felület
+-- új ügyfél
+--- új felhasználó létrehozása script
+--- új bankszámlák létrehozása script
+--- új hitelkártya létrehozásas script
+--- kezdőösszeg befizetés script
+
+ÉRDEKES HIBAESETEK
+- áll megb. módosításnál ha heti rendszeresség volt, nem választódott ki az aktuális nap, mert az egyik utasításban tévedésből
+  toString() helyett toString-et írtam (zárójelek nélkül)
+-- hasonló többször is előfordult (pl == helyett =, függvény() helyett függvény) 
+- mobilnet uj áll megb felvitelnél a days mezőbe ""-t írt "-" helyett napi rendszeresség esetén. Ez ütközött a netbank api logikájával és módosítása
+   során NULL került a mezőbe '-' helyett, ami a következő módosítás alkalmával hibával leállt
+
+TESZTELÉS
+- ugy us teszeltem, hogy  mobilbankon végeztem tevékenységeket és ellenőriztem, hogy a netbankon megefeleően jelennek e meg az adatok, 
+  ugyanis a két felület eltérő APIt használ

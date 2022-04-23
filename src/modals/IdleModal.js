@@ -15,7 +15,7 @@ export const IdleTimeOutModal = ({ showModal, handleClose, handleLogout }) => {
         <Card.Body className="pb-0">
           <p>Ön egy ideje nem végzett semmilyen műveletet. Marad belépve, vagy kijelentkezik?</p>
           <br />
-          <form onSubmit={handleLogout} className="row g-3 needs-validation" noValidate>
+          <form onSubmit={handleLogout} className="row g-3" noValidate>
             <Button className="btn btn-success w-100" type="submit">
               Kijelentkezek
             </Button>

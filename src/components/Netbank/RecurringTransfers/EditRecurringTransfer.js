@@ -22,7 +22,7 @@ function EditRecurringTransfer(props) {
   const [beneficiaries, setBeneficiaries] = useState([]);
   const [button1IsDisabled, setButton1IsDisabled] = useState(true);
   const [button2IsDisabled, setButton2IsDisabled] = useState(false);
-  const [checkBosIsDisabled, setCheckBosIsDisabled] = useState(true);
+  const [checkBoxIsDisabled, setCheckBoxIsDisabled] = useState(true);
   const [comment, setComment] = useState(location.state.comment);
   const [currency, setCurrency] = useState(location.state.currency);
   const [days, setDays] = useState(location.state.days);
@@ -160,12 +160,12 @@ function EditRecurringTransfer(props) {
         setPartnerName(e.currentTarget.value.split(" - ")[1]);
         setPartnerAccountNumber(e.currentTarget.value.split(" - ")[2]);
         setIsChecked(false);
-        setCheckBosIsDisabled(true);
+        setCheckBoxIsDisabled(true);
       }
     } catch (error) {
       setPartnerName(e.target.value);
       setPartnerAccountNumber("");
-      setCheckBosIsDisabled(false);
+      setCheckBoxIsDisabled(false);
     }
   }
 
@@ -489,7 +489,7 @@ function EditRecurringTransfer(props) {
                         className="form-check-input"
                         onClick={handleClickCheckBox}
                         checked={isChecked}
-                        disabled={checkBosIsDisabled}
+                        disabled={checkBoxIsDisabled}
                         type="checkbox"
                         id="gridCheck1"
                       />

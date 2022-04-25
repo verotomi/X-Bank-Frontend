@@ -5,6 +5,9 @@ import React, { Fragment } from "react";
 import TableHeadForeignCurrencies from "./TableHeadForeignCurrencies";
 import TableRowForeignCurrencies from "./TableRowForeignCurrencies";
 
+/**
+ * A deviza árfolyamok listája
+ */
 export default class ForeignCurrenciesBody extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

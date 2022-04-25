@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankfiókok lista-fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadBranches extends React.Component {
   constructor(props) {
     super(props);

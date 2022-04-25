@@ -2,6 +2,9 @@ import HeaderNav from "../Shared/HeaderNav";
 import Profile from "./Profile/Profile";
 import React, { Fragment } from "react";
 
+/**
+ * A bejelentkezéssel elérhető felület fejléce
+ */
 export default function NetbankHeader() {
   return (
     <Fragment>

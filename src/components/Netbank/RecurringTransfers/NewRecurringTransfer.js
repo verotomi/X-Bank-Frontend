@@ -15,6 +15,9 @@ const monthlyOptions = [
   "25. napján", "26. napján", "27. napján", "28. napján", "29. napján", "30. napján", "31. napján"
 ]
 
+/**
+ * Új állandó megbízás rögzítése
+ */
 class NewRecurringTransfer extends React.Component {
   static contextType = ApiContext;
   constructor(props) {
@@ -154,19 +157,19 @@ class NewRecurringTransfer extends React.Component {
     this.setState({ frequency: e.currentTarget.value });
     switch (e.currentTarget.value) {
       case "Minden hét":
-        this.setState({actualOptions: weeklyOptions});
-        this.setState({isSelectDisabled: false});
-        this.setState({days: "Monday"});
+        this.setState({ actualOptions: weeklyOptions });
+        this.setState({ isSelectDisabled: false });
+        this.setState({ days: "Monday" });
         break;
       case "Minden hónap":
-        this.setState({actualOptions: monthlyOptions});
-        this.setState({isSelectDisabled: false});
-        this.setState({days: "1"});
+        this.setState({ actualOptions: monthlyOptions });
+        this.setState({ isSelectDisabled: false });
+        this.setState({ days: "1" });
         break;
       case "Minden nap":
-        this.setState({actualOptions: []});
-        this.setState({isSelectDisabled: true});
-        this.setState({days: "-"});
+        this.setState({ actualOptions: [] });
+        this.setState({ isSelectDisabled: true });
+        this.setState({ days: "-" });
         break;
       default:
         break;
@@ -279,7 +282,7 @@ class NewRecurringTransfer extends React.Component {
       this.setState({ isError: false });
       if (this.state.isChecked) {
         const data2 = {
-          id_user: this.props.id, 
+          id_user: this.props.id,
           name: this.state.name,
           partner_name: this.state.partnerName,
           partner_account_number: this.state.partnerAccountNumber,

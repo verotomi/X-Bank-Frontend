@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankszámla-egyenlegek lista-adatainak a megjelenítése, formázása
+ */
 export default class TableRowAccountBalances extends React.Component {
   render() {
     return (

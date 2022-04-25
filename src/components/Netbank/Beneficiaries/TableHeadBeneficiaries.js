@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A kedvezményezettek lista-fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadBeneficiaries extends React.Component {
   constructor(props) {
     super(props);

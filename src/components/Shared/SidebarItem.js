@@ -3,7 +3,9 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { toggleSidebar } from "../../actions/actions";
 
-
+/**
+ * Az oldalsó menü alkotóeleme
+ */
 class SidebarItem extends React.Component {
   constructor(props) {
     super(props);

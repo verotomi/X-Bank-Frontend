@@ -4,7 +4,6 @@ import { evaluate, formatAmount } from "../../../assets/script/scripts";
 import { Link } from "react-router-dom";
 import { Row, Col, Card, Alert } from "react-bootstrap";
 import { sessionExpired, translate } from "../../../assets/script/scripts";
-import { transferOneTime } from "../../../actions/actions";
 import { tryToLogout, showLoggedOutModal, updateAccountsAction } from "../../../actions/actions";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 import React, { Fragment } from "react";
@@ -390,7 +389,6 @@ class TransferOneTime extends React.Component {
 }
 
 const mapDispatchToProps = {
-  transferOneTime,
   tryToLogout,
   showLoggedOutModal,
   updateAccountsAction,

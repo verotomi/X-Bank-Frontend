@@ -1,6 +1,9 @@
 import { Dropdown } from "react-bootstrap";
 import React, { Fragment } from "react";
 
+/**
+ * A megtakarítások listájának a szűrését kezelő komponens
+ */
 export default class FilterSavings extends React.Component {
   constructor(props) {
     super(props);

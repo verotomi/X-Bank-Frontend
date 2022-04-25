@@ -5,6 +5,9 @@ import * as constantsClass from "../../../assets/constant/constants";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 import React, { Fragment } from "react";
 
+/**
+ * Pénzügyi statisztika megjelenítése
+ */
 class Statistics extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

@@ -7,6 +7,9 @@ import { Row, Col, Table, Card } from "react-bootstrap";
 import { ApiContext } from "../../../api/ApiProvider";
 import * as constantsClass from "../../../assets/constant/constants";
 
+/**
+ * A bankfiókok megjelenítése
+ */
 export default class Branches extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

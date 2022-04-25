@@ -11,6 +11,9 @@ import React, { Fragment } from "react";
 import TableHeadCreditCards from "./TableHeadCreditCards";
 import TableRowCreditCards from "./TableRowCreditCards";
 
+/**
+ * A bankkártyák listájának a megjelenítése
+ */
 class CreditCardsBody extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

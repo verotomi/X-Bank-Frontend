@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { Dropdown } from "react-bootstrap";
 
+/**
+ * Az állandó megbízások listájának a szűrését kezelő komponens
+ */
 export default class FilterRecurringTransfers extends React.Component {
   constructor(props) {
     super(props);

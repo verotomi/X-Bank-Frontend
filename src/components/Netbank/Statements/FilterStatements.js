@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { Dropdown } from "react-bootstrap";
 
+/**
+ * A bankszémlakivonatok listájának a szűrését kezelő komponens
+ */
 export default class FilterStatements extends React.Component {
   constructor(props) {
     super(props);

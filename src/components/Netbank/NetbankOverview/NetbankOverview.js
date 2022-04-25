@@ -8,6 +8,9 @@ import CreditCardsBody from "../CreditCards/CreditCards";
 import React, { Fragment } from "react";
 import Savings from "../Savings/Savings";
 
+/**
+ * A bejelentkezéshez kötött felület áttekintő oldala
+ */
 class NetbankOverview extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

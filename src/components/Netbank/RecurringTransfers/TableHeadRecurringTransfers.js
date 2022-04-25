@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * Az állandó megbízások lista-fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadRecurringTransfers extends React.Component {
   constructor(props) {
     super(props);

@@ -11,6 +11,9 @@ import React, { Fragment } from "react";
 import TableHead from "./TableHeadStatements";
 import TableRowStatements from "./TableRowStatements";
 
+/**
+ * A bankszámlakivonatok listája
+ */
 class StatementsBody extends React.Component {
   static contextType = ApiContext;
   static pageSize = 10;

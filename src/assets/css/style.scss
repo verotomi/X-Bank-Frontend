@@ -4,11 +4,11 @@
 // ************************************************************************************************
 // ******** General *******************************************************************************
 // ************************************************************************************************
-*{
+* {
   --bs-body-font-family: "Roboto";
   font-family: var(--bs-body-font-family);
 }
-#main{
+#main {
   margin-bottom: 40px;
 }
 html {
@@ -19,78 +19,10 @@ html {
   -o-hyphens: auto;
   hyphens: auto;
 }
-body {
-  background: v.$main-background-color !important;
-}
 a {
   text-decoration: none;
   &:hover {
     text-decoration: none;
-  }
-}
-@media (max-width: 599px) {
-  p, label, .footer {
-    font-size: 10px !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-  }
-  .alert{
-    font-size: 14px;
-  }
-  .card-body p {
-    margin-bottom: 0;
-  }
-  table, input {
-    font-size: 10px !important;
-  }
-  input, select {
-    font-size: 10px !important;
-    padding: 6px !important;
-  }
-  .form-item span {
-    font-size: 10px !important;
-  }
-  h4{
-      font-size: 12px !important;
-  }
-  .go-back-to-top i {
-    font-size: 20px !important;
-  }
-  .card-icon > .bi:first-child {
-    font-size: 20px !important;
-}
-  h5, .breadcrumb, .breadcrumb-item a, #login-button, #profile-button {
-    font-size: 14px !important;
-    h5 .badge {
-      font-size: 10px !important;
-      margin-left: 5px;
-    }
-  }
-  .dropdown-header p{
-    font-size: 14px !important;
-  }
-  .dropdown-item p{
-    font-size: 12px !important;
-  }
-  .dropdown-menu {
-    width: fit-content !important;
-}
-  .card-icon {
-    width: 48px !important;
-    height: 48px !important;
-  }
-  #dropdown-basic, .bi-three-dots {
-    font-size: 10px !important;
-  }
-  
-  .badge{
-    padding: 4px 8px !important;
-  }
-  th, tr {
-    @media (max-width: 599px) {
-      padding-left: 0px !important;
-      padding-right: 0px !important;
-    }
   }
 }
 
@@ -102,6 +34,9 @@ $danger: v.$netbank-red-color;
 $link-decoration: none;
 $dropdown-min-width: 120px;
 @import "bootstrap";
+body {
+  background: v.$main-background-color !important;
+}
 .table {
   --bs-table-hover-bg: #f7760012;
   margin-top: 1em;
@@ -113,7 +48,8 @@ $dropdown-min-width: 120px;
   background-color: darken($success, 11%);
   color: white;
 }
-.d-lg-block, .d-none {
+.d-lg-block,
+.d-none {
   display: block !important;
 }
 .pe-3 {
@@ -121,19 +57,17 @@ $dropdown-min-width: 120px;
 }
 .pb-0 {
   padding-bottom: 15px !important;
+}
 
-}
-.card-body {
-  @media (max-width: 599px) {
-    padding: 0.4rem 0.4rem 0 0.4rem;
-  }
-}
 // ************************************************************************
 // ******** Breadcrumbs ---------------------------------------------------
 // ************************************************************************
-
 .breadcrumb {
   font-size: 20px;
+  @media (max-width: 599px) {
+    padding-left: 5px;
+    font-size: 14px;
+  }
   color: v.$middle-blue-color;
   a {
     color: v.$middle-blue-color;
@@ -146,19 +80,21 @@ $dropdown-min-width: 120px;
     font-weight: 600;
     color: v.$middle-blue-color;
     @media (max-width: 599px) {
-      padding-left: 10px;
+      font-size: 14px;
     }
   }
 }
-.breadcrumb-item a{
+.breadcrumb-item a {
   font-weight: 500;
   color: gray;
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
 }
 
 // ************************************************************************
 // ******** Popover *******************************************************
 // ************************************************************************
-
 .popover {
   max-width: 100%;
   border-radius: 5px;
@@ -173,7 +109,7 @@ $dropdown-min-width: 120px;
     font-size: 14px;
   }
 }
-.popover-body td{
+.popover-body td {
   @media (max-width: 599px) {
     font-size: 11px;
   }
@@ -186,9 +122,7 @@ $dropdown-min-width: 120px;
   margin-top: 60px;
   padding: 20px 30px;
   transition: all 0.3s;
-}
-@media (max-width: 599px) {
-  #main {
+  @media (max-width: 599px) {
     padding: 20px 5px 5px 10px;
   }
 }
@@ -196,14 +130,14 @@ $dropdown-min-width: 120px;
 // ************************************************************************
 // ******** Dropdown ******************************************************
 // ************************************************************************
-
 #dropdown-header-profile {
   background-color: v.$light-background-color;
   color: v.$dark-blue-color;
   &:focus {
     box-shadow: none;
   }
-  .dropdown-header ,.dropdown-item {
+  .dropdown-header,
+  .dropdown-item {
     @media (max-width: 599px) {
       font-size: 14px;
     }
@@ -216,6 +150,20 @@ $dropdown-min-width: 120px;
 .dropdown .dropdown-menu {
   padding: 0px;
 }
+.dropdown-header {
+  p {
+    @media (max-width: 599px) {
+      font-size: 14px;
+    }
+  }
+}
+.dropdown-item {
+  p {
+    @media (max-width: 599px) {
+      font-size: 12px;
+    }
+  }
+}
 .dropdown-menu {
   animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
@@ -226,6 +174,9 @@ $dropdown-min-width: 120px;
   border-radius: 4px;
   box-shadow: 0px 5px 25px 0px rgba(44, 88, 44, 0.4);
   padding: 10px 0;
+  @media (max-width: 599px) {
+    width: fit-content;
+  }
   .dropdown-header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -395,6 +346,9 @@ $dropdown-min-width: 120px;
   &:focus {
     box-shadow: none;
   }
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
 }
 #login-button {
   color: v.$middle-blue-color;
@@ -406,12 +360,14 @@ $dropdown-min-width: 120px;
   &:focus {
     box-shadow: none;
   }
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
 }
 
 // ************************************************************************************************
 // ******** Sidebar *******************************************************************************
 // ************************************************************************************************
-
 .sidebar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
@@ -433,7 +389,7 @@ $dropdown-min-width: 120px;
   overflow-y: auto;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: white;
-  border-radius: 0px 0px 5px 0px ;
+  border-radius: 0px 0px 5px 0px;
   @media (max-width: 599px) {
     transition: all 0.6s;
     width: v.$sidebar-width-low-res;
@@ -520,7 +476,7 @@ $dropdown-min-width: 120px;
       background-color: v.$sidebar-nav-background-color;
       padding: 10px 15px 10px 25px;
       @media (max-width: 599px) {
-        padding: 10px 15px 10px 15px!important;
+        padding: 10px 15px 10px 15px;
       }
       margin: 0px 0px 5px 0px;
       border-radius: 4px;
@@ -539,12 +495,12 @@ $dropdown-min-width: 120px;
     li {
       transition: all 0.3s;
     }
-    .bi-circle, .bi-circle-fill{
+    .bi-circle,
+    .bi-circle-fill {
       vertical-align: 0.3em;
       @media (max-width: 599px) {
-      font-size: 4px;
-      vertical-align: 0.15em;
-
+        font-size: 4px;
+        vertical-align: 0.15em;
       }
     }
   }
@@ -555,7 +511,7 @@ $dropdown-min-width: 120px;
   }
 }
 @media (min-width: 1200px) {
-  #main{
+  #main {
     margin-left: v.$sidebar-width;
   }
   #footer {
@@ -576,6 +532,7 @@ $dropdown-min-width: 120px;
     left: -#{v.$sidebar-width};
   }
 }
+
 // ************************************************************************************************
 // ******** Dashboard *****************************************************************************
 // ************************************************************************************************
@@ -588,8 +545,11 @@ $dropdown-min-width: 120px;
       padding-bottom: 5px;
       transition: all 0.5s;
       font-size: 16px;
+      @media (max-width: 599px) {
+        font-size: 10px;
+      }
     }
-    .dropdown-toggle{
+    .dropdown-toggle {
       color: v.$three-dot-button-color;
       &:hover,
       &:focus {
@@ -641,6 +601,10 @@ $dropdown-min-width: 120px;
     line-height: 0;
     width: 64px;
     height: 64px;
+    @media (max-width: 599px) {
+      width: 48px;
+      height: 48px;
+    }
     flex-shrink: 0;
     flex-grow: 0;
     margin: 10px 10px 0 10px;
@@ -655,6 +619,9 @@ $dropdown-min-width: 120px;
     }
     h4 {
       font-size: 15px;
+      @media (max-width: 599px) {
+        font-size: 12px;
+      }
       margin-left: 95px;
       font-weight: bold;
       margin-bottom: 5px;
@@ -677,7 +644,6 @@ $dropdown-min-width: 120px;
 // ************************************************************************
 // ******** Card **********************************************************
 // ************************************************************************
-
 .card {
   border-radius: 5px;
   border: none;
@@ -689,9 +655,11 @@ $dropdown-min-width: 120px;
   overflow: hidden;
 }
 .card-body {
+  @media (max-width: 599px) {
+    padding: 0.4rem 0.4rem 0 0.4rem;
+  }
   p {
     padding-left: 1em;
-    padding-top: 10px;
     padding-right: 1em;
     text-align: justify;
   }
@@ -704,6 +672,7 @@ $dropdown-min-width: 120px;
   padding: 20px 0 15px 0;
   @media (max-width: 599px) {
     padding: 15px 0 15px 15px;
+    font-size: 14px;
   }
   span {
     color: v.$card-title-span-color;
@@ -718,11 +687,15 @@ h5.card-title {
     padding: 15px 0 0 0;
   }
 }
+.card-icon > .bi:first-child {
+  @media (max-width: 599px) {
+    font-size: 20px;
+  }
+}
 
 // ************************************************************************
 // ******** Form **********************************************************
 // ************************************************************************
-
 #grid-check-history-1,
 #grid-check-history-2 {
   margin-left: 1em;
@@ -734,6 +707,11 @@ h5.card-title {
   margin-bottom: 20px;
   @media (max-width: 599px) {
     margin-bottom: 8px;
+  }
+  span {
+    @media (max-width: 599px) {
+      font-size: 10px;
+    }
   }
 }
 .form-check-input {
@@ -753,7 +731,12 @@ h5.card-title {
 .form-label {
   margin-bottom: 0.3em;
 }
-.login-form{
+.form-control, .form-select{
+  @media (max-width: 599px) {
+    font-size: 10px;
+  }
+}
+.login-form {
   padding: 0px 0px 10px 0px;
   margin-top: 5px;
 }
@@ -792,6 +775,10 @@ input,
 select {
   display: inline-block;
   width: 10em;
+  @media (max-width: 599px) {
+    font-size: 10px;
+    padding: 6px;
+  }
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -886,8 +873,10 @@ input[type="number"] {
 // ************************************************************************
 // ******** Table *********************************************************
 // ************************************************************************
-
 table {
+  @media (max-width: 599px) {
+    font-size: 10px;
+  }
   h5 {
     margin-bottom: 0px;
     @media (max-width: 599px) {
@@ -898,6 +887,11 @@ table {
     font-weight: 500;
     line-height: 1;
     font-size: 0.7em;
+    @media (max-width: 599px) {
+      padding: 4px 8px;
+      font-size: 10px;
+      margin-left: 5px;
+    }
   }
 }
 table th:first-child {
@@ -906,8 +900,37 @@ table th:first-child {
 table th:last-child {
   border-radius: 0 3px 3px 0;
 }
+.table > :not(caption) > * > td {
+  @media (max-width: 599px) {
+    padding: 0.3rem 0 0.3rem 0;
+  }
+}
+.table > :not(caption) > * > th {
+  @media (max-width: 599px) {
+    padding: 0.5rem 0.1rem 0.5rem 0;
+  }
+}
+.table > :not(caption) > * > td:first-child {
+  @media (max-width: 599px) {
+    padding-left: 0.3rem;
+  }
+}
+.table > :not(caption) > * > th:first-child {
+  @media (max-width: 599px) {
+    padding-left: 0.3rem;
+  }
+}
+.table > :not(caption) > * > td:last-child {
+  @media (max-width: 599px) {
+    padding-right: 0.3rem;
+  }
+}
+.table > :not(caption) > * > th:last-child {
+  @media (max-width: 599px) {
+    padding-right: 0.3rem;
+  }
+}
 th {
-  padding: 8px 10px 8px 8px !important;
   font-weight: v.$table-header-font-weight;
 }
 tr td {
@@ -966,12 +989,11 @@ tr:nth-child(1) td {
 // ************************************************************************
 // ******** Rest **********************************************************
 // ************************************************************************
-
 #credit-card-details {
   font-weight: 500;
   text-decoration: none;
 }
-#mobileBankImage{
+#mobileBankImage {
   margin-top: 31px;
   margin-right: 16px;
 }
@@ -983,20 +1005,40 @@ h5 i {
   background-color: v.$sidebar-nav-background-color;
 }
 .modal-body label {
-  font-size: 15px !important;
+  font-size: 15px;
+}
+.modal-body input {
+  @media (max-width: 599px) {
+    font-size: 15px;
+  }
 }
 .first-label {
   margin-top: 1em;
 }
-.bi-filter{
-  vertical-align: 0em;  
+.bi-filter {
+  vertical-align: 0em;
+}
+@media (max-width: 599px) {
+  p,
+  label,
+  .footer {
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .alert {
+    font-size: 14px;
+  }
+  .card-body p {
+    margin-bottom: 0;
+  }
 }
 // ************************************************************************************************
 // ******** Footer ********************************************************************************
 // ************************************************************************************************
 .footer {
   padding: 20px 0;
-  color:v.$dark-blue-color;
+  color: v.$dark-blue-color;
   font-size: 14px;
   transition: all 0.3s;
   border-top: 1px solid v.$footer-border-color;
@@ -1013,7 +1055,6 @@ h5 i {
 // ************************************************************************
 // ******** Back to top button ********************************************
 // ************************************************************************
-
 .go-back-to-top {
   background: v.$middle-blue-color;
   border-radius: 6px;
@@ -1028,6 +1069,9 @@ h5 i {
   z-index: 999;
   i {
     font-size: 24px;
+    @media (max-width: 599px) {
+      font-size: 20px;
+    }
     color: white;
     line-height: 0;
   }
@@ -1044,36 +1088,6 @@ h5 i {
         color: black;
       }
     }
-  }
-}
-.table>:not(caption)>*>td {
-  @media (max-width: 599px) {
-    padding: 0.3rem 0 0.3rem 0 !important; 
-  }
-}
-.table>:not(caption)>*>th {
-  @media (max-width: 599px) {
-    padding: 0.5rem 0.1rem 0.5rem 0 !important; 
-  }
-}
-.table>:not(caption)>*>td:first-child {
-  @media (max-width: 599px) {
-    padding-left: 0.3rem !important; 
-  }
-}
-.table>:not(caption)>*>th:first-child {
-  @media (max-width: 599px) {
-    padding-left: 0.3rem !important; 
-  }
-}
-.table>:not(caption)>*>td:last-child {
-  @media (max-width: 599px) {
-    padding-right: 0.3rem !important; 
-  }
-}
-.table>:not(caption)>*>th:last-child {
-  @media (max-width: 599px) {
-    padding-right: 0.3rem !important; 
   }
 }
 

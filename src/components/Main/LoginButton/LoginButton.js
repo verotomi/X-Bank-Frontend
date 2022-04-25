@@ -5,6 +5,10 @@ import { Modal, Button, Alert, Card } from "react-bootstrap";
 import { tryToLogin } from "../../../actions/actions";
 import React, { Fragment, useContext, useState } from "react";
 
+/**
+ * Bejelentkező gomb és a bejelentkezési ablak megjelenítése
+ * @param {*} props 
+ */
 function LoginButton(props) {
   const [isOpen, setOpenState] = useState(false);
   const [loginResponse, setLoginResponse] = useState("");

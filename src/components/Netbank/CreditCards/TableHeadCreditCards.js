@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankkártyalisták fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadCreditCards extends React.Component {
   render() {
     return (

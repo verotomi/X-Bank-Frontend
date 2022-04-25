@@ -6,6 +6,9 @@ import { translate, formatCreditcardNumber, formatAmount, sessionExpired } from 
 import { tryToLogout, showLoggedOutModal } from "../../../actions/actions";
 import React, { Fragment } from "react";
 
+/**
+ * Egy bankkártya adatainak a módosítása
+ */
 class EditCreditCard extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

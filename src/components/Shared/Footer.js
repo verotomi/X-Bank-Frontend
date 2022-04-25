@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { GO_BACK_TO_TOP } from "../../assets/config/config";
 
+/**
+ * Lábléc
+ */
 export default class Footer extends React.Component {
   componentDidMount() {
     this.goBackToTop();

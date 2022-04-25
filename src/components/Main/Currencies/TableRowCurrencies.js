@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A valuta árfolyamok lista-adatainak a megjelenítése, formázása
+ */
 export default class TableRowCurrencies extends React.Component {
   render() {
     return (

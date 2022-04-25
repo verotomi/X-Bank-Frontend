@@ -4,6 +4,9 @@ import BreadCrumbs from "../../Shared/BreadCrumbs";
 import { ApiContext } from "../../../api/ApiProvider";
 import CurrenciesBody from "./CurrenciesBody";
 
+/**
+ * A valuta árfolyamok listájának az alapja
+ */
 export default class Currencies extends React.Component {
   static contextType = ApiContext;
 

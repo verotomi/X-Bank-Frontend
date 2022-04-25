@@ -5,6 +5,9 @@ import React, { Fragment } from "react";
 import TableHeadCurrencies from "./TableHeadCurrencies";
 import TableRowCurrencies from "./TableRowCurrencies";
 
+/**
+ * A valuta árfolyamok listája
+ */
 export default class CurrenciesBody extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

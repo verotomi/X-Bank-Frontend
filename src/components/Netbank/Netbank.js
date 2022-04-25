@@ -25,6 +25,10 @@ import TransferOneTime from "./TransferOneTime/TransferOneTime";
 import { TIMEOUT } from "../../assets/config/config";
 import RecurringTransfers from "./RecurringTransfers/RecurringTransfers";
 
+/**
+ * A bejelentkezéssel elérhető felület útválasztója
+ * @param {*} props 
+ */
 class Netbank extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

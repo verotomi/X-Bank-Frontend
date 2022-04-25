@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { Dropdown } from "react-bootstrap";
 
+/**
+ * A bankfiókok listájának a szűrését kezelő komponens
+ */
 export default class FilterBranches extends React.Component {
   constructor(props) {
     super(props);

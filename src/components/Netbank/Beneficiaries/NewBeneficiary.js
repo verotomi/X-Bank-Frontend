@@ -8,6 +8,9 @@ import { tryToLogout, showLoggedOutModal } from "../../../actions/actions";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 import React, { Fragment } from "react";
 
+/**
+ * Új kedvezményezett rögzítése
+ */
 class NewBeneficiary extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

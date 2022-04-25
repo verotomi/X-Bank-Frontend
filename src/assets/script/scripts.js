@@ -2,7 +2,7 @@ import { useState } from "react";
 
 /**
  * Lejárt token esetén tájékoztatja a felhasználót, törli a böngészőben tárolt adatokat (köztük a tokent is), valamint kilépteti a felhasználót.
- * @param {*} props 
+ * @param {*} props
  */
 export function sessionExpired(props) {
   props.showLoggedOutModal("A munkamenet lejárt! Kérem jelentkezzen be újra!");
@@ -10,6 +10,9 @@ export function sessionExpired(props) {
   props.tryToLogout();
 }
 
+/**
+ * Az adatbázisban angolul tárolt szövegek magyar nyelvre fordítását végzi
+ */
 export function translate(englishText) {
   let hungarianText;
   if (englishText != null) {
@@ -165,7 +168,15 @@ export function translate(englishText) {
   return hungarianText;
 }
 
+/**
+ * A beviteli mezők validációját végzi
+ * @param {string} fieldValue a beviteli mező értéke
+ * @param {string} criterion feltétel típusa
+ * @param {array} opts a feltétel paraméterei
+ * @returns
+ */
 export function evaluate(fieldValue, criterion, opts) {
+  debugger;
   switch (criterion) {
     case "required":
       if (fieldValue.length > 0) {
@@ -205,14 +216,18 @@ export function evaluate(fieldValue, criterion, opts) {
   }
 }
 
+/**
+ * A bankkártyaszámot #### #### #### #### formátumban adja vissza
+ * @param {int} s
+ */
 export function formatCreditcardNumber(s) {
   return s.toString().replace(/\d{4}(?=.)/g, "$& ");
 }
 
-export function formatBankAccountNumber(s) {
-  return s.toString().replace(/\d{4}(?=.)/g, "$& ");
-}
-
+/**
+ * A pénzösszegeket #.## formátutmúvá alakítja át
+ * @param {float} s
+ */
 export function formatAmount(s) {
   let x = parseFloat(s);
   x = x.toFixed(2);
@@ -220,6 +235,9 @@ export function formatAmount(s) {
   return x;
 }
 
+/**
+ * A felhasználó adatainak a böngésző memóriájába történő mentését és az onnan történő kiolvasását végzi
+ */
 export default function useUserData() {
   const getUserData = () => {
     const userDataString = sessionStorage.getItem("userData");

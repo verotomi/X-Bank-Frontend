@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankautomaták lista-adatainak a megjelenítése, formázása
+ */
 export default class TableRowAtms extends React.Component {
   render() {
     return (

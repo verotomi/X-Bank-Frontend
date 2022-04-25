@@ -10,6 +10,9 @@ import { LoggedOutModal } from "../../../modals/LoggedOutModal";
 import { connect } from "react-redux";
 import { hideLoggedOutModal } from "../../../actions/actions";
 
+/**
+ * A bejelentkezés nélkül elérhető felület áttekintő oldala
+ */
 class MainOverview extends React.Component {
   constructor(props) {
     super(props);

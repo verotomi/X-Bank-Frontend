@@ -2,6 +2,9 @@ import { formatAmount, translate } from "../../../assets/script/scripts";
 import { OverlayTrigger, Popover } from "react-bootstrap";
 import React, { Fragment } from "react";
 
+/**
+ * A megtakarítások lista-adatainak a megjelenítése, formázása
+ */
 function TableRowSavings(props) {
   const popover = (
     <Popover id="popover-basic">

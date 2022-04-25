@@ -3,6 +3,9 @@ import { OverlayTrigger, Popover } from "react-bootstrap";
 import React, { Fragment } from "react";
 import replace from "lodash/replace";
 
+/**
+ * A bankszámlatörténet lista adatainak a megjelenítése, formázása
+ */
 function TableRowHistory(props) {
   let tempComment = replace(props.col4, "Early withdrawal", "Betét feltörése");
   tempComment = replace(tempComment, "Cash withdrawal ", "Készpénzfelvétel");

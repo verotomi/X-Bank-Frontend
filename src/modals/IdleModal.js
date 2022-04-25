@@ -3,6 +3,10 @@ import Modal from "react-bootstrap/Modal";
 import React from "react";
 import { Card } from "react-bootstrap";
 
+/**
+ * Inaktivítás esetén megjelenő felugró ablak
+ * @param {*} param0 az ablak kezeléséhez szükséges paraméterek
+ */
 export const IdleTimeOutModal = ({ showModal, handleClose, handleLogout }) => {
   return (
     <Modal show={showModal} onHide={handleClose}>

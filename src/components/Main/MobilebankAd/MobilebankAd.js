@@ -4,6 +4,9 @@ import { Row, Col, Card } from "react-bootstrap";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 import { MOBILEAPP_DOWNLOAD_LOCATION } from "../../../assets/config/config";
 
+/**
+ * A Bank mobilbank alkalmazásának a tájékoztatója
+ */
 export default class MobilebankAd extends React.Component {
   render() {
     return (

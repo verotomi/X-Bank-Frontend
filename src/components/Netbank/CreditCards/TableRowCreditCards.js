@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankkártyalisták adatainak a megjelenítése, formázása
+ */
 function TableRowCreditCards(props) {
   return (
     <Fragment>

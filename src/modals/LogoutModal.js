@@ -2,6 +2,10 @@ import Modal from "react-bootstrap/Modal";
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 
+/**
+ * A kijelentkezés megerősítését kérő felugró ablak
+ * @param {*} param0 az ablak kezeléséhez szükséges paraméterek
+ */
 export const LogoutModal = ({ showModal, handleClose, handleLogout }) => {
   return (
     <Modal show={showModal} onHide={handleClose}>

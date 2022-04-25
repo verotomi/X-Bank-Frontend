@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { OverlayTrigger, Popover } from "react-bootstrap";
 
+/**
+ * A bankfiókok lista-adatainak a megjelenítése, formázása
+ */
 export default class TableRowBranches extends React.Component {
   constructor(props) {
     super(props);

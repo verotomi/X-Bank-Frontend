@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import SidebarItem from "../Shared/SidebarItem";
 
+/**
+ * A bejelentkezés nélküli felület oldalmenüje
+ */
 export default class MainSidebar extends React.Component {
   render() {
     return (

@@ -8,6 +8,9 @@ import { Col, Table, Card } from "react-bootstrap";
 import { ApiContext } from "../../../api/ApiProvider";
 import * as constantsClass from "../../../assets/constant/constants";
 
+/**
+ * A bankautomaták megjelenítése
+ */
 export default class Atms extends React.Component {
   static contextType = ApiContext;
   constructor(props) {
@@ -189,13 +192,7 @@ export default class Atms extends React.Component {
         <div className={this.props.type === "light" ? "" : "dashboard"}>
           <Row>
             <Col lg="12">
-              <Card
-                className={
-                  this.props.type === "light"
-                    ? "card netbank-card card-small"
-                    : "card netbank-card"
-                }
-              >
+              <Card className={this.props.type === "light" ? "card netbank-card card-small" : "card netbank-card"}>
                 <FilterAtms onFilterChange={this.handleFilterChange} filter1="Összes" filter2="Forint" filter3="Euro" />
                 <Card.Body className="pb-0">
                   <div className="d-flex flex-row">
@@ -203,7 +200,12 @@ export default class Atms extends React.Component {
                       <i className="bi bi-cash-stack"></i>
                     </div>
                     <h5 className="card-title">
-                      Bankautomaták<span> <i className="bi bi-filter"> </i>{this.state.filter}</span>
+                      Bankautomaták
+                      <span>
+                        {" "}
+                        <i className="bi bi-filter"> </i>
+                        {this.state.filter}
+                      </span>
                     </h5>
                   </div>
                   <Table

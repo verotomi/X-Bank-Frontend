@@ -14,6 +14,10 @@ const monthlyOptions = [
   "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"
 ]
 
+/**
+ * Egy állandó megbízás módosítása
+ * @param {*} props 
+ */
 function EditRecurringTransfer(props) {
   const location = useLocation();
   const [actualOptions, setActualOptions] = useState([]);
@@ -287,7 +291,7 @@ function EditRecurringTransfer(props) {
   async function startQuery(e) {
     const data = {
       id: location.state.recurring_transfer_id,
-      id_user: props.id, 
+      id_user: props.id,
       id_bank_account_number: sourceAccountNumberId,
       name: name,
       currency: currency,

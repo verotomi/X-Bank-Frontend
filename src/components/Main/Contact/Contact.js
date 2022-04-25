@@ -2,6 +2,9 @@ import React, { Fragment } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 
+/**
+ * A kapcsolati adatok megjelenítése
+ */
 export default class Contact extends React.Component {
   render() {
     return (
@@ -101,9 +104,9 @@ export default class Contact extends React.Component {
                       www.xbank.hu
                     </a>
                     <br />
-                    E-mail címek:
-                    <br />- általános információ: <a href="mailto:creditcard@xbank.hu">info@xbank.hu</a>
-                    <br />- bankkártyával kapcsolatos kérdések: <a href="mailto:creditcard@xbank.hu">creditcard@xbank.hu</a>
+                    Általános információ: <a href="mailto:creditcard@xbank.hu">info@xbank.hu</a>
+                    <br />
+                    Bankkártyával kapcsolatos kérdések: <a href="mailto:creditcard@xbank.hu">creditcard@xbank.hu</a>
                     <br />
                     Facebook:{" "}
                     <a target="_blank" rel="noreferrer" href="https://www.facebook.com/X-Bank-378694379633392">

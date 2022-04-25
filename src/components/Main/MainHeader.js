@@ -3,6 +3,9 @@ import HeaderNav from "../Shared/HeaderNav";
 import React, { Fragment } from "react";
 import useUserData from "../../assets/script/scripts";
 
+/**
+ * A bejelentkezés nélküli felület fejléce
+ */
 export default function MainHeader() {
   const { setUserData } = useUserData();
 

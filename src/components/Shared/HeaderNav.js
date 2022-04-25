@@ -5,6 +5,10 @@ import { toggleSidebar } from "../../actions/actions";
 import favicon from "../../assets/img/favicon.jpg";
 import React, { Fragment } from "react";
 
+/**
+ * Fejléc
+ * @param {*} props 
+ */
 function HeaderNav(props) {
   function handleOnclick(e) {
     e.preventDefault();

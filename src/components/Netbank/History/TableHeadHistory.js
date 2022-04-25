@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankszámlatörténet lista fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadHistory extends React.Component {
   constructor(props) {
     super(props);

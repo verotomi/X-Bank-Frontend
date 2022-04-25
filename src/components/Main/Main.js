@@ -13,6 +13,10 @@ import MainSidebar from "./MainSidebar";
 import MobilebankAd from "./MobilebankAd/MobilebankAd";
 import React from "react";
 
+/**
+ * A bejelentkezés nélkül elérhető felület útválasztója
+ * @param {*} props 
+ */
 function Main(props) {
   return (
     <div className={props.isSidebarClose ? "toggle-sidebar" : ""}>

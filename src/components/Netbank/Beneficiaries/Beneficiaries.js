@@ -10,6 +10,9 @@ import React, { Component, Fragment } from "react";
 import TableHeadBeneficiaries from "./TableHeadBeneficiaries";
 import TableRowBeneficiaries from "./TableRowBeneficiaries";
 
+/**
+ * A kedvezményezettek megjelenítése
+ */
 class BeneficiariesList extends Component {
   static contextType = ApiContext;
   constructor(props) {

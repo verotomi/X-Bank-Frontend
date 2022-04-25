@@ -9,6 +9,9 @@ import React, { Fragment } from "react";
 import TableHeadAccountBalances from "./TableHeadAccountBalances";
 import TableRowAccountBalances from "./TableRowAccountBalances";
 
+/**
+ * A bankszámla-egyenlegek megjelenítése
+ */
 class AccountBalances extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

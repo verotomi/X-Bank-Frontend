@@ -7,9 +7,8 @@ import React, { Fragment, useContext, useState } from "react";
 import { LogoutModal } from "../../../modals/LogoutModal";
 
 /**
- * 
+ * A felhasználó adatait és a felhasználóhoz kapcsolódó menüt (jelszóvéltoztatás, kilépés) jeleníti meg
  * @param {*} props 
- * @returns 
  */
 function Profile(props) {
   const [alert4Color, setAlert4Color] = useState("danger");

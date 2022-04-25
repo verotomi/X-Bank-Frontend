@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * Az állandó megbízások lista-adatainak  a megjelenítése, formázása
+ */
 function TableRowRecurringTransfers(props) {
   return (
     <Fragment>

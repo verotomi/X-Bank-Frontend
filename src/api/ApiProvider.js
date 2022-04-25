@@ -63,6 +63,10 @@ export class ApiProvider extends Component {
     };
   }
 
+  /**
+   * A felhasználó bejelentkezéséhez kapcsolódó API kérés
+   * @param {array} credentials JSON tömb, a felhasználó neve és jelszava
+   */
   loginUser = async (credentials) => {
     return await fetch(this.props.serverAddress + "/login", {
       method: "POST",
@@ -73,6 +77,11 @@ export class ApiProvider extends Component {
     }).then((data) => data.json());
   };
 
+  /**
+   * A felhasználó kijelentkezését végző API kérés
+   * @param {array} credentials JSON tömb, a felhasználó neve és jelszava
+   * @param {string} token a felhasználó tokenje
+   */
   logoutUser = async (credentials, token) => {
     return await fetch(this.props.serverAddress + "/logout", {
       method: "POST",
@@ -84,6 +93,11 @@ export class ApiProvider extends Component {
     }).then((data) => data.json());
   };
 
+ /**
+   * A jelszóváltoztatást végző API kérés
+   * @param {array} credentials JSON tömb, a felhasználó neve és jelszava
+   * @param {string} token a felhasználó tokenje
+   */
   changePassword = async (credentials, token) => {
     return await fetch(this.props.serverAddress + "/changepassword", {
       method: "PUT",
@@ -95,6 +109,11 @@ export class ApiProvider extends Component {
     }).then((data) => data.json());
   };
 
+   /**
+   * A pénzügyi statisztikai kimutatás megjelenítéséhez tartozó API kérés
+   * @param {array} credentials JSON tömb, a felhasználó neve és jelszava
+   * @param {string} token a felhasználó tokenje
+   */
   getStatistics = async (token) => {
     return await fetch(this.props.serverAddress + "/statistics", {
       method: "GET",
@@ -110,6 +129,11 @@ export class ApiProvider extends Component {
       });
   };
 
+  /**
+   * A számlatörténet megjelenítéséhez tartozó API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   getAccountHistory = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/getaccounthistory", {
       method: "POST",
@@ -126,6 +150,11 @@ export class ApiProvider extends Component {
     return history;
   };
 
+  /**
+   * Új megtakarítás rögzítéséhez tartozó API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   createNewSaving = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/insertsaving", {
       method: "POST",
@@ -139,6 +168,10 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * A lehetséges megtakarítási módozatok lekérdezését végző API kérés
+   * @param {string} token a felhasználó tokenje
+   */
   getSavingTypes = async (token) => {
     const response = await fetch(this.props.serverAddress + "/getsavingtypes", {
       method: "GET",
@@ -152,6 +185,11 @@ export class ApiProvider extends Component {
     return savingTypes;
   };
 
+  /**
+   * Egy megtakarítás feltöréséhez tartozó API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   breakDeposit = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/breakdeposit", {
       method: "PUT",
@@ -165,6 +203,11 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * Állandó átutalási megbízás módoísítását végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   updateRecurringTransfer = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/updaterecurringtransfer", {
       method: "PUT",
@@ -178,6 +221,11 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * Állandó átutalási megbízás törlését végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   deleteRecurringTransfer = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/deleterecurringtransfer", {
       method: "DELETE",
@@ -192,6 +240,11 @@ export class ApiProvider extends Component {
     return recurringtransfer;
   };
 
+  /**
+   * Új állandó átutalási megbízás rögzítését végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   createRecurringTransfer = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/createrecurringtransfer", {
       method: "POST",
@@ -205,6 +258,11 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * Átutalási megbízás indítását végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   createOneTimeTransfer = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/createtransferonetime", {
       method: "POST",
@@ -218,6 +276,11 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * Új kedvezményezett rögzítését végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   createBeneficiary = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/createbeneficiary", {
       method: "POST",
@@ -231,6 +294,11 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * Meglévő kedvezményezett módosítását végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   updateBeneficiary = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/updatebeneficiary", {
       method: "PUT",
@@ -245,6 +313,11 @@ export class ApiProvider extends Component {
     return beneficiary;
   };
 
+  /**
+   * Bankkártya beállításainak a módosítását végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   updateCreditCard = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/updatecreditcard", {
       method: "PUT",
@@ -258,6 +331,11 @@ export class ApiProvider extends Component {
     return response;
   };
 
+  /**
+   * Kedvezményezett törlését végző API kérés
+   * @param {array} data a kérés feldolgozásához szükséges adatok
+   * @param {string} token a felhasználó tokenje
+   */
   deleteBeneficiary = async (data, token) => {
     const response = await fetch(this.props.serverAddress + "/deletebeneficiary", {
       method: "DELETE",
@@ -270,7 +348,11 @@ export class ApiProvider extends Component {
     }).then((data) => data.json());
     return response;
   };
-
+  /**
+   * A bankszámlakivonatok listájának a megjelenítéséhez tartozó API kérés
+   * @param {int} id_user a felhasználó azonosítója
+   * @param {string} token a felhasználó tokenje
+   */
   getStatements = async (id_user, token) => {
     const response = await fetch(this.props.serverAddress + "/getstatements", {
       method: "POST",
@@ -285,6 +367,11 @@ export class ApiProvider extends Component {
     return statements;
   };
 
+  /**
+   * A kedvezményezettek listájának a megjelenítéséhez tartozó API kérés
+   * @param {int} id_user a felhasználó azonosítója
+   * @param {string} token a felhasználó tokenje
+   */
   getBeneficiaries = async (id_user, token) => {
     const response = await fetch(this.props.serverAddress + "/getbeneficiaries", {
       method: "POST",
@@ -299,6 +386,11 @@ export class ApiProvider extends Component {
     return beneficiaries;
   };
 
+  /**
+   * A felhasználó megtakarításait megjelenítő listához tartozó API kérés
+   * @param {int} id_user a felhasználó azonosítója
+   * @param {string} token a felhasználó tokenje
+   */
   getSavings = async (id_user, token) => {
     const response = await fetch(this.props.serverAddress + "/getsavings", {
       method: "POST",
@@ -313,6 +405,11 @@ export class ApiProvider extends Component {
     return savings;
   };
 
+  /**
+   * Afelhasználó állandó megbízásainak a megjelenítéséhez tartozó API kérés
+   * @param {int} id_user a felhasználó azonosítója
+   * @param {string} token a felhasználó tokenje
+   */
   getRecurringTransfers = async (id_user, token) => {
     const response = await fetch(this.props.serverAddress + "/getrecurringtransfers", {
       method: "POST",
@@ -327,6 +424,11 @@ export class ApiProvider extends Component {
     return recurringTransfers;
   };
 
+  /**
+   * A falhasználó bankkártyáinak a megjelenítéséhez tartozó API kérés
+   * @param {int} id_user a felhasználó azonosítója
+   * @param {string} token a felhasználó tokenje
+   */
   getCreditCards = async (id_user, token) => {
     const response = await fetch(this.props.serverAddress + "/getcreditcards", {
       method: "POST",
@@ -341,6 +443,11 @@ export class ApiProvider extends Component {
     return creditCards;
   };
 
+  /**
+   * A bankszámla-egyenlegek megjelenítéséhez tartozó API kérés
+   * @param {int} id_user a felhasználó azonosítója
+   * @param {string} token a felhasználó tokenje
+   */
   getAccountBalances = async (id_user, token) => {
     const response = await fetch(this.props.serverAddress + "/getaccountbalances", {
       method: "POST",
@@ -355,24 +462,36 @@ export class ApiProvider extends Component {
     return accountBalances;
   };
 
+  /**
+   * A valuta árfolyamok megjelenítéséhez tartozó API kérés
+   */
   getCurrencies = async () => {
     const response = await fetch(this.props.serverAddress + "/getcurrencies");
     const currencies = response.json();
     return currencies;
   };
 
+  /**
+   * A deviza árfolyamok megjelenítéséhez tartozó API kérés
+   */
   getForeignCurrencies = async () => {
     const response = await fetch(this.props.serverAddress + "/getforeigncurrencies");
     const currencies = response.json();
     return currencies;
   };
 
+  /**
+   * A bankfiókok listájának a megjelenítéséhez tartozó API kérés
+   */
   getBranches = async () => {
     const response = await fetch(this.props.serverAddress + "/getbranches");
     const branches = response.json();
     return branches;
   };
 
+  /**
+   * A bankautomaták listájának a megjelenítéséhez tartozó API kérés
+   */
   getAtms = async () => {
     const response = await fetch(this.props.serverAddress + "/getatms");
     const atms = response.json();

@@ -7,6 +7,9 @@ import { updateAccountsAction } from "../../../actions/actions";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 import React, { Fragment } from "react";
 
+/**
+ * Új megtakarítás rögzítése
+ */
 class NewSaving extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

@@ -3,6 +3,9 @@ import { Row, Col, Card } from "react-bootstrap";
 import { VERSION_NUMBER } from "../../../assets/config/config";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 
+/**
+ * Az információs oldal megjelenítése
+ */
 export default class Information extends React.Component {
   render() {
     return (
@@ -47,7 +50,7 @@ export default class Information extends React.Component {
                     <h5 className="card-title">Jogi nyilatkozat</h5>
                   </div>
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
-                    Tájékoztatás a weboldal üzemeltetőjének jogi felelősségeiről
+                    Tájékoztatás a weboldal üzemeltetőjének a jogi felelősségeiről
                   </label>
                   <p>
                     Tájékoztatjuk, hogy az X Bank Limited (a továbbiakban: Bank) netbank alkalmazásának a használatával Ön -

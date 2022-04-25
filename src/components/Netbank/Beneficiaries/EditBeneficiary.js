@@ -8,6 +8,9 @@ import { useLocation } from "react-router-dom";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 import React, { Fragment, useContext, useState } from "react";
 
+/**
+ * A kedvezményezettek módosítáas
+ */
 function EditBeneficiary(props) {
   const apiContext = useContext(ApiContext);
   const location = useLocation();

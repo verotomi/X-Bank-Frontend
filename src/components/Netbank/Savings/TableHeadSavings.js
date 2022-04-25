@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A megtakarítások lista-fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadSavings extends React.Component {
   constructor(props) {
     super(props);

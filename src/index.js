@@ -7,6 +7,9 @@ import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom";
 
+/**
+ * Az alkalmazás alapja és a Redux Store helye
+ */
 const initialState = {
   accounts: [],
   created_on: "2000-01-01 00:00:00",
@@ -56,8 +59,6 @@ function reducer(state = initialState, action) {
       return { ...state, isSidebarItem3Open: isSidebarItem3Open ? false : true };
     case "UPDATE_ACCOUNTS":
       return { ...state, accounts: action.data };
-    case "TRANSFER_ONE_TIME":
-      return { ...state };
     case "TOGGLE_EDIT_CREDIT_CARD_COMPONENT":
       return { ...state, isEditCreditCardComponentOpen: isEditCreditCardComponentOpen ? false : true };
     case "SHOW_LOGGEDOUT_MODAL":

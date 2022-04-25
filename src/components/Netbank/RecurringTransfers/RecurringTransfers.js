@@ -11,6 +11,9 @@ import TableHead from "./TableHeadRecurringTransfers";
 import TableRowRecurringTransfers from "./TableRowRecurringTransfers";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 
+/**
+ * Állandó megbízások listája
+ */
 class RecurringTransfers extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

@@ -11,6 +11,9 @@ import TableHeadSavings from "./TableHeadSavings";
 import TableRowSavings from "./TableRowSavings";
 import BreadCrumbs from "../../Shared/BreadCrumbs";
 
+/**
+ * Megtajarítások listája
+ */
 class Savings extends React.Component {
   static contextType = ApiContext;
   constructor(props) {

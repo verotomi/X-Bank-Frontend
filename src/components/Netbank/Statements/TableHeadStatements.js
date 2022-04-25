@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankszámlakivonatok lista-fejlécének a megjelenítése, formázása
+ */
 export default class TableHeadStatements extends React.Component {
   constructor(props) {
     super(props);

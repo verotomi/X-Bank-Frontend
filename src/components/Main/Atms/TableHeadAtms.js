@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+/**
+ * A bankautomaták lista-fejlécének a megjelenítése, formázása
+ */
 export default class TableheadAtms extends React.Component {
   constructor(props) {
     super(props);

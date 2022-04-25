@@ -4,6 +4,9 @@ import { toggleSidebarItem, toggleSidebarItem2, toggleSidebarItem3, toggleSideba
 import React, { Fragment, useEffect, useState } from "react";
 import SidebarItem from "../Shared/SidebarItem";
 
+/**
+ * A bejelentkezéssel elérhető felület oldalmenüje
+ */
 function NetbankSidebar(props) {
   const [navLinkAClassname, setNavlinkAClassname] = useState("bi bi-circle");
   const [navLinkBClassname, setNavlinkBClassname] = useState("bi bi-circle");

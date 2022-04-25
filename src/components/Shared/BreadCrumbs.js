@@ -2,6 +2,10 @@ import { Breadcrumb } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import React, { Fragment } from "react";
 
+/**
+ * Az aktuális menü-helyzet megjelenítése
+ * @param {*} props 
+ */
 function BreadCrumbs(props) {
   return (
     <Fragment>

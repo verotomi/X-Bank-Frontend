@@ -4,6 +4,9 @@ import BreadCrumbs from "../../Shared/BreadCrumbs";
 import ForeignCurrenciesBody from "./ForeignCurrenciesBody";
 import React, { Fragment } from "react";
 
+/**
+ * A deviza árfolyamok listájának az alapja
+ */
 export default class ForeignCurrencies extends React.Component {
   static contextType = ApiContext;
 

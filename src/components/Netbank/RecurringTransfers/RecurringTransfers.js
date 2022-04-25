@@ -359,6 +359,7 @@ class RecurringTransfers extends React.Component {
   };
 
   handleDeleteRecurringTransfer(e) {
+    debugger
     this.setState({ nodeValueId: e.target.attributes.id.nodeValue });
     this.setState({ nodeValueNumber: e.target.attributes.number.nodeValue });
     this.setState({ modalIsOpen: true });
@@ -428,7 +429,7 @@ class RecurringTransfers extends React.Component {
                         col8={
                           <h5>
                             <Link className="btn badge bg-success" to="/allandomegbizasmodositas" state={a}>
-                              <i className="bi bi-pencil"></i> {window.innerWidth > 599 && " Módosítás"}
+                              <i className="bi bi-pencil"></i>&nbsp;Módosítás
                             </Link>
                           </h5>
                         }
@@ -440,7 +441,7 @@ class RecurringTransfers extends React.Component {
                               onClick={this.handleDeleteRecurringTransfer}
                               className="btn badge bg-danger"
                             >
-                              <i className="bi bi-x-square"></i>{window.innerWidth > 599 && " Törlés"}
+                              <i className="bi bi-x-square"></i>&nbsp;Törlés
                             </Badge>
                           </h5>
                         }

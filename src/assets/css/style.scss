@@ -61,9 +61,6 @@ a {
 }
   h5, .breadcrumb, .breadcrumb-item a, #login-button, #profile-button {
     font-size: 14px !important;
-    span {
-      font-size: 12px !important;
-    }
     h5 .badge {
       font-size: 10px !important;
       margin-left: 5px;
@@ -82,14 +79,12 @@ a {
     width: 48px !important;
     height: 48px !important;
   }
-  #dropdown-basic, .bi-three-dots, .bi-x-square {
+  #dropdown-basic, .bi-three-dots {
     font-size: 10px !important;
   }
-  .bi-pencil {
-    font-size: 13px !important;
-  }
+  
   .badge{
-    padding: 4px 12px !important;
+    padding: 4px 8px !important;
   }
   th, tr {
     @media (max-width: 599px) {
@@ -134,7 +129,7 @@ $dropdown-min-width: 120px;
   }
 }
 // ************************************************************************
-// ******** Breadcrumbs ***************************************************
+// ******** Breadcrumbs ---------------------------------------------------
 // ************************************************************************
 
 .breadcrumb {
@@ -560,9 +555,11 @@ $dropdown-min-width: 120px;
   }
 }
 @media (min-width: 1200px) {
-  #main,
-  #footer {
+  #main{
     margin-left: v.$sidebar-width;
+  }
+  #footer {
+    margin-left: 0;
   }
 }
 @media (max-width: 1199px) {

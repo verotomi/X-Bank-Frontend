@@ -30,7 +30,7 @@ export default class Information extends React.Component {
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
                     A weboldal szolgáltatójának részletes adatai
                   </label>
-                  <p>
+                  <p className="noIndent">
                     Cég neve: X Bank Limited
                     <br />
                     Cég címe: 1013 Budapest, Lánchíd utca 2.
@@ -155,7 +155,7 @@ export default class Information extends React.Component {
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
                     A netbank alkalmazás adatai
                   </label>
-                  <p>
+                  <p className="noIndent">
                     Verzió: {VERSION_NUMBER}
                     <br />© 2022 Verovszki Tamás
                   </p>

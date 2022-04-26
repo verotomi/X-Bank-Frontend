@@ -29,7 +29,7 @@ export default class Contact extends React.Component {
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
                     A Bank központi címe
                   </label>
-                  <p>
+                  <p className="noIndent">
                     Cég neve: X Bank Limited
                     <br />
                     Cég címe: 1013 Budapest, Lánchíd utca 2.
@@ -54,7 +54,7 @@ export default class Contact extends React.Component {
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
                     Telefonos elérhetőségek
                   </label>
-                  <p>
+                  <p className="noIndent">
                     Központi iroda: +36-20/289-0955
                     <br />
                     Bankkártya forródrót (0-24h): +36-20/289-0955
@@ -74,7 +74,7 @@ export default class Contact extends React.Component {
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
                     Postafiók adatok
                   </label>
-                  <p>
+                  <p className="noIndent">
                     X Bank Limited
                     <br />
                     Budapest
@@ -98,7 +98,7 @@ export default class Contact extends React.Component {
                   <label htmlFor="selectSourceAccountNumber" className="form-label first-label">
                     Elektronikus kapcsolatfelvételi lehetőségek
                   </label>
-                  <p>
+                  <p className="noIndent">
                     Weboldal:{" "}
                     <a target="_blank" rel="noreferrer" href="https://www.verovszki.eu/xbank/">
                       www.xbank.hu

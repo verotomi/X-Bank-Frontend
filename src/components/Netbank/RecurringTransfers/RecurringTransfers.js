@@ -362,7 +362,6 @@ class RecurringTransfers extends React.Component {
   };
 
   handleDeleteRecurringTransfer(e) {
-    debugger
     this.setState({ nodeValueId: e.target.attributes.id.nodeValue });
     this.setState({ nodeValueNumber: e.target.attributes.number.nodeValue });
     this.setState({ modalIsOpen: true });

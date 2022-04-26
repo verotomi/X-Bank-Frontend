@@ -176,7 +176,6 @@ export function translate(englishText) {
  * @returns
  */
 export function evaluate(fieldValue, criterion, opts) {
-  debugger;
   switch (criterion) {
     case "required":
       if (fieldValue.length > 0) {

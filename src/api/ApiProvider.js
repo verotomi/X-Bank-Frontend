@@ -9,7 +9,7 @@ export const ApiContext = createContext({
   createRecurringTransfer: () => {},
   deleteBeneficiary: () => {},
   deleteRecurringTransfer: () => {},
-  getAccountBalances: () => {},
+  getAccounts: () => {},
   getAccountHistory: () => {},
   getAtms: () => {},
   getBeneficiaries: () => {},
@@ -42,7 +42,7 @@ export class ApiProvider extends Component {
       createRecurringTransfer: this.createRecurringTransfer,
       deleteBeneficiary: this.deleteBeneficiary,
       deleteRecurringTransfer: this.deleteRecurringTransfer,
-      getAccountBalances: this.getAccountBalances,
+      getAccounts: this.getAccounts,
       getAccountHistory: this.getAccountHistory,
       getAtms: this.getAtms,
       getBeneficiaries: this.getBeneficiaries,
@@ -448,8 +448,8 @@ export class ApiProvider extends Component {
    * @param {int} id_user a felhasználó azonosítója
    * @param {string} token a felhasználó tokenje
    */
-  getAccountBalances = async (id_user, token) => {
-    const response = await fetch(this.props.serverAddress + "/getaccountbalances", {
+  getAccounts = async (id_user, token) => {
+    const response = await fetch(this.props.serverAddress + "/getaccounts", {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -48,7 +48,7 @@ class NetbankOverview extends React.Component {
     if (this.props.isEditCreditCardComponentOpen) {
       this.props.toggleEditCreditCardComponent();
     }
-    this.context.getAccountBalances(this.props.id, this.props.token).then((accounts) => {
+    this.context.getAccounts(this.props.id, this.props.token).then((accounts) => {
       this.setState({ ...this.state, accounts: accounts });
       this.props.updateAccountsAction(accounts);
     });

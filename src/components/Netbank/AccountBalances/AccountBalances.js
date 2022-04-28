@@ -26,7 +26,7 @@ class AccountBalances extends React.Component {
 
   async componentDidMount() {
     this.setState({ loadingText: constantsClass.TEXT_LOADING });
-    const fetchedData = await this.context.getAccountBalances(this.props.id, this.props.token);
+    const fetchedData = await this.context.getAccounts(this.props.id, this.props.token);
     if (fetchedData["error"] === "Lejárt token!") {
       sessionExpired(this.props);
     } else if (fetchedData.length === 0) {

@@ -190,7 +190,7 @@ class TransferOneTime extends React.Component {
         };
         this.context.createBeneficiary(data2, this.props.token).then();
       }
-      this.context.getAccountBalances(this.props.id, this.props.token).then((accounts) => {
+      this.context.getAccounts(this.props.id, this.props.token).then((accounts) => {
         this.setState({ ...this.state, accounts: accounts });
         this.props.updateAccountsAction(accounts);
       });

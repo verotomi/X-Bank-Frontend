@@ -661,6 +661,9 @@ body {
   p {
     padding-left: 0.5em;
     padding-top: 1em;
+    @media (max-width: 599px) {
+      padding-top: 0.5em;
+    }
     padding-right: 1em;
     text-align: justify;
     text-indent: 1em;
@@ -698,9 +701,10 @@ h5.card-title {
     font-size: 20px;
   }
 }
-.card-body .noIndent{
+.card-body .noIndent {
   text-indent: 0em;
 }
+
 // ************************************************************************
 // ******** Form **********************************************************
 // ************************************************************************
@@ -739,7 +743,8 @@ h5.card-title {
 .form-label {
   margin-bottom: 0.3em;
 }
-.form-control, .form-select{
+.form-control,
+.form-select {
   @media (max-width: 599px) {
     font-size: 10px;
   }
@@ -970,6 +975,44 @@ tr:nth-child(1) td {
   font-style: italic;
   font-weight: 500;
   color: v.$netbank-blue-color;
+  animation: blinker 1s linear infinite;
+  p {
+    padding-right: 0px;
+  }
+  width: 300px;
+  @keyframes blinker {
+    25% {
+      color: darken(v.$netbank-blue-color, 25%);
+    }
+    50% {
+      color: v.$netbank-blue-color;
+    }
+    75% {
+      color: lighten(v.$netbank-blue-color, 18%);
+    }
+  }
+}
+.loading:after{
+  animation-duration: 2500ms ;
+  animation-fill-mode: both ;
+  animation-iteration-count: infinite ;
+  animation-name: changeLetter ;
+  animation-timing-function: linear ;
+  content: "" ;
+  @keyframes changeLetter {
+    0% {
+      content: "";
+    }
+    25% {
+      content: ".";
+    }
+    50% {
+      content: "..";
+    }
+    75% {
+      content: "...";
+    }
+  }
 }
 .pointer-cursor {
   cursor: pointer;
@@ -1041,6 +1084,7 @@ h5 i {
     margin-bottom: 0;
   }
 }
+
 // ************************************************************************************************
 // ******** Footer ********************************************************************************
 // ************************************************************************************************
@@ -1098,4 +1142,3 @@ h5 i {
     }
   }
 }
-

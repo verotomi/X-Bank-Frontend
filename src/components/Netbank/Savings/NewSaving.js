@@ -127,7 +127,7 @@ class NewSaving extends React.Component {
       this.setState({ alert2Color: "success" });
       this.setState({ showAlert2: true });
       this.setState({ isError: false });
-      this.context.getAccountBalances(this.props.id, this.props.token).then((accounts) => {
+      this.context.getAccounts(this.props.id, this.props.token).then((accounts) => {
         this.setState({ ...this.state, accounts: accounts });
         this.props.updateAccountsAction(accounts);
       });

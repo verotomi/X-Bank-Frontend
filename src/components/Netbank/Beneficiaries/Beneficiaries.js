@@ -24,6 +24,7 @@ class BeneficiariesList extends Component {
       nodeValueNumber: 0,
       modalIsOpen: false,
       loadingText: "",
+      loadingTextClass: "loading",
       showAlert1: false,
       alert1Color: "danger",
       validationResponse: "",

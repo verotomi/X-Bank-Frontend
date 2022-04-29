@@ -125,7 +125,7 @@ export class ApiProvider extends Component {
     })
       .then((data) => data.text())
       .catch((error) => {
-        console.error(`Could not get products: ${error}`);
+        console.error(`Could not get data: ${error}`);
       });
   };
 
